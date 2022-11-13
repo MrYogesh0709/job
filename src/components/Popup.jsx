@@ -39,7 +39,7 @@ const Popup = () => {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>
+            <MenuItem>
               <Jobpop />
             </MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
