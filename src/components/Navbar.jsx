@@ -9,15 +9,30 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Link } from "react-router-dom";
-import { Drawer } from "@mui/material";
+import {
+  Collapse,
+  Drawer,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import Sidebar from "./Sidebar";
 import Popup from "./Popup";
+import StarBorder from "@mui/icons-material/StarBorder";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import ExpandLess from "@mui/icons-material/ExpandLess";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
+  const [openSub, setOpenSub] = React.useState(true);
 
   const toggleSlider = () => {
     setOpen(!open);
+  };
+  const handleClick = () => {
+    setOpenSub(!openSub);
   };
   return (
     <Box component="div">
@@ -61,11 +76,32 @@ const Navbar = () => {
                     width: 250,
                   }}
                   role="presentation"
-                  // onClick={toggleSlider}
-                  // onKeyDown={toggleSlider}
+                  onClick={toggleSlider}
                 >
                   <Sidebar />
                 </Box>
+                <Link
+                  to="/services"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  <ListItemButton onClick={handleClick}>
+                    <ListItemIcon>
+                      <DesignServicesIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Services" />
+                    {openSub ? <ExpandLess /> : <ExpandMore />}
+                  </ListItemButton>
+                </Link>
+                <Collapse in={openSub} timeout="auto" unmountOnExit>
+                  <List component="div" disablePadding>
+                    <ListItemButton sx={{ pl: 4 }} onClick={toggleSlider}>
+                      <ListItemIcon>
+                        <StarBorder />
+                      </ListItemIcon>
+                      <ListItemText primary="Starred" />
+                    </ListItemButton>
+                  </List>
+                </Collapse>
               </Drawer>
             </Box>
             <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />

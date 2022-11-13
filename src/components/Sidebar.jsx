@@ -7,22 +7,11 @@ import {
 } from "@mui/material";
 import React from "react";
 import ListItemText from "@mui/material/ListItemText";
-import Collapse from "@mui/material/Collapse";
 import HomeIcon from "@mui/icons-material/Home";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import StarBorder from "@mui/icons-material/StarBorder";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import InfoIcon from "@mui/icons-material/Info";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-  const [open, setOpen] = React.useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
   return (
     <>
       <Avatar
@@ -57,28 +46,6 @@ const Sidebar = () => {
             <ListItemText primary="About Us" color="black" />
           </ListItemButton>
         </Link>
-        <Link
-          to="/services"
-          style={{ color: "inherit", textDecoration: "none" }}
-        >
-          <ListItemButton onClick={handleClick}>
-            <ListItemIcon>
-              <DesignServicesIcon />
-            </ListItemIcon>
-            <ListItemText primary="Services" />
-            {open ? <ExpandLess /> : <ExpandMore />}
-          </ListItemButton>
-        </Link>
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 4 }}>
-              <ListItemIcon>
-                <StarBorder />
-              </ListItemIcon>
-              <ListItemText primary="Starred" />
-            </ListItemButton>
-          </List>
-        </Collapse>
       </List>
     </>
   );
