@@ -1,9 +1,8 @@
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { Box, Button, Menu, MenuItem, Typography } from "@mui/material";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import { Box, Button, Menu, MenuItem } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import Jobpop from "./Jobpop";
 
 const Popup = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -41,17 +40,7 @@ const Popup = () => {
             }}
           >
             <MenuItem onClick={handleClose}>
-              <Box display={"flex"} component="div">
-                <Typography>
-                  <Link
-                    to={"/services/job-support-services"}
-                    style={{ color: "inherit", textDecoration: "none" }}
-                  >
-                    Job-Serivces
-                  </Link>
-                </Typography>
-                <ArrowRightIcon />
-              </Box>
+              <Jobpop />
             </MenuItem>
             <MenuItem onClick={handleClose}>My account</MenuItem>
             <MenuItem onClick={handleClose}>Logout</MenuItem>

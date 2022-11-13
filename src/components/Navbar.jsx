@@ -19,7 +19,6 @@ const Navbar = () => {
   const toggleSlider = () => {
     setOpen(!open);
   };
-
   return (
     <Box component="div">
       <AppBar position="static">
@@ -62,8 +61,8 @@ const Navbar = () => {
                     width: 250,
                   }}
                   role="presentation"
-                  onClick={toggleSlider}
-                  onKeyDown={toggleSlider}
+                  // onClick={toggleSlider}
+                  // onKeyDown={toggleSlider}
                 >
                   <Sidebar />
                 </Box>
