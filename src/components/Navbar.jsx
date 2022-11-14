@@ -132,6 +132,14 @@ const Navbar = () => {
               }}
             >
               <Link
+                to={"/"}
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <Button sx={{ my: 2, color: "white", display: "block" }}>
+                  Home
+                </Button>
+              </Link>
+              <Link
                 to={"/about"}
                 style={{ color: "inherit", textDecoration: "none" }}
               >
@@ -150,7 +158,7 @@ const Navbar = () => {
                 style={{ color: "inherit", textDecoration: "none" }}
               >
                 <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  Contact
+                  Contact Us
                 </Button>
               </Link>
             </Box>
