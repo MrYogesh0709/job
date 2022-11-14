@@ -7,6 +7,7 @@ import {
   CardMedia,
   Typography,
   Grid,
+  Container,
 } from "@mui/material";
 import hero from "../../images/home.jpg";
 import home1 from "../../images/home1.jpg";
@@ -88,8 +89,8 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
-      <Box maxWidth={"95vw"} width="100%" margin={"2rem auto"}>
-        <Card>
+      <Container>
+        <Card sx={{ margin: "2rem 0" }}>
           <Grid container spacing={2}>
             <Grid item xs={4} margin={"0 auto"}>
               <CardMedia component="img" image={home1} alt="green iguana" />
@@ -126,7 +127,7 @@ const Home = () => {
             </Grid>
           </Grid>
         </Card>
-      </Box>
+      </Container>
     </Box>
   );
 };
