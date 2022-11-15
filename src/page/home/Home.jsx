@@ -149,7 +149,14 @@ const Home = () => {
               >
                 From Real Time Professional
               </Typography>
-              <CardContent>
+              <CardContent
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: "column",
+                }}
+              >
                 <Typography variant="body2" color="text.primary">
                   If you are a fresher or experienced candidate who is new to a
                   technology or struggling to complete work alone, we have a
@@ -160,6 +167,9 @@ const Home = () => {
                   from India in the USA, UK, Canada, Australia, and other
                   countries at quite affordable prices.
                 </Typography>
+                <Button variant="contained" color="success" sx={{ mt: "1rem" }}>
+                  Read more
+                </Button>
               </CardContent>
             </Grid>
           </Grid>
