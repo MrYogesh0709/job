@@ -19,6 +19,7 @@ import devops from "../../images/home/devops.png";
 import fullstack from "../../images/home/full-stack.png";
 import aws from "../../images/home/logoaws.png";
 import react from "../../images/home/reactlogo.png";
+import { Link } from "react-router-dom";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -114,12 +115,20 @@ const Home = () => {
               Get Job Support by Real time Experts
             </Typography>
             <br />
-            <Button variant="contained">More Details</Button>
+            <Link
+              to="/services"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <Button variant="contained">More Details</Button>
+            </Link>
 
             <Button
               variant="contained"
               color="success"
-              sx={{ marginLeft: "20px" }}
+              sx={{ marginLeft: "20px", textDecoration: "none" }}
+              component="a"
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=+916280811923"
             >
               Whatsapp
             </Button>
@@ -167,9 +176,18 @@ const Home = () => {
                   from India in the USA, UK, Canada, Australia, and other
                   countries at quite affordable prices.
                 </Typography>
-                <Button variant="contained" color="success" sx={{ mt: "1rem" }}>
-                  Read more
-                </Button>
+                <Link
+                  to="/about"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  <Button
+                    variant="contained"
+                    color="success"
+                    sx={{ mt: "1rem" }}
+                  >
+                    Read more
+                  </Button>
+                </Link>
               </CardContent>
             </Grid>
           </Grid>
@@ -212,7 +230,7 @@ const Home = () => {
                       variant="p"
                       fontWeight={500}
                       textAlign="justify"
-                      minHeight={180}
+                      minHeight={10}
                       sx={{ wordBreak: "break-word" }}
                     >
                       {item.para}
