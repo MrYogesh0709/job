@@ -41,7 +41,14 @@ const Footer = () => {
       >
         <UserBox>
           <EmailOutlinedIcon color="white" fontSize="large" />
-          <Typography variant="h6" color={"white"}>
+          <Typography
+            variant="h6"
+            component="a"
+            color="white"
+            href="mailto:advikatechnology.1207@gmail.com"
+            sx={{ textDecoration: "none" }}
+            target="_blank"
+          >
             advikatechnology.1207@gmail.com
           </Typography>
         </UserBox>
@@ -55,7 +62,15 @@ const Footer = () => {
         ></Divider>
         <UserBox>
           <WhatsAppIcon fontSize="large" />
-          <Typography variant="h6" color={"white"} textAlign={"center"}>
+          <Typography
+            variant="h6"
+            color={"white"}
+            textAlign={"center"}
+            component="a"
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=+916280811923"
+            sx={{ textDecoration: "none" }}
+          >
             +91 6280811923
           </Typography>
         </UserBox>
@@ -76,7 +91,17 @@ const Footer = () => {
           </Box>
           <Box display={"flex"} gap="1rem" alignItems={"center"}>
             <CallOutlinedIcon />
-            +91 9993889052
+            <Typography
+              variant="h6"
+              color={"white"}
+              textAlign={"center"}
+              component="a"
+              target="_blank"
+              href="tel:6031112298p000"
+              sx={{ textDecoration: "none" }}
+            >
+              +91 9993889052
+            </Typography>
           </Box>
           <Typography variant="h7" color={"white"} textAlign="center">
             Copyright © 2022 All rights reserved for Advika Technology

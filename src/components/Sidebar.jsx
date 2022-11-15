@@ -9,6 +9,7 @@ import React from "react";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -44,6 +45,17 @@ const Sidebar = () => {
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="About Us" color="black" />
+          </ListItemButton>
+        </Link>
+        <Link
+          to="/contact"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <ListItemButton>
+            <ListItemIcon>
+              <ContactPageIcon />
+            </ListItemIcon>
+            <ListItemText primary="Contact Us" color="black" />
           </ListItemButton>
         </Link>
       </List>
