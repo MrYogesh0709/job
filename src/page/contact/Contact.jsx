@@ -99,7 +99,7 @@ const Contact = () => {
                   id="outlined-basic"
                   required
                   label="Mail"
-                  name="email"
+                  name="Email"
                   aria-describedby="my-helper-text"
                   variant="outlined"
                   sx={{ width: "100%" }}
@@ -128,9 +128,10 @@ const Contact = () => {
               <FormControl>
                 <TextField
                   label="Message"
+                  type="text"
                   placeholder="Enter your message"
                   id="message"
-                  name="message"
+                  name="Message"
                   multiline
                   rows={4}
                   sx={{ width: "100%" }}
