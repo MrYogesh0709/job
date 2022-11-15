@@ -34,7 +34,7 @@ const Contact = () => {
     setOpen(false);
   };
 
-  const [state, handleSubmit] = useForm("maykaoqj");
+  const [state, handleSubmit] = useForm("xgeqdlpb");
   if (state.succeeded) {
     return (
       <>
@@ -77,7 +77,7 @@ const Contact = () => {
             GET IN TOUCH
           </Typography>
           <form
-            action="https://formspree.io/f/maykaoqj"
+            action="https://formspree.io/f/xgeqdlpb"
             method="POST"
             className="form"
             onSubmit={handleSubmit}
