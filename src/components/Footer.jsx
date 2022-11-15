@@ -26,7 +26,7 @@ const Footer = () => {
         width: "100%",
         backgroundColor: "#424242",
       }}
-      component={"div"}
+      component={"footer"}
     >
       <Box
         width={"95vw"}
