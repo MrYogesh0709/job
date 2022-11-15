@@ -6,29 +6,49 @@ import {
   Container,
   FormControl,
   FormHelperText,
+  Snackbar,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
 import contact from "../../images/contact.webp";
+import MuiAlert from "@mui/material/Alert";
 import { useForm, ValidationError } from "@formspree/react";
-import { Link } from "react-router-dom";
+
+const Alert = React.forwardRef(function Alert(props, ref) {
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Contact = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+
   const [state, handleSubmit] = useForm("maykaoqj");
   if (state.succeeded) {
     return (
-      <section className="error-page section">
-        <div className="error-container">
-          <h1>Thanks</h1>
-          <p>The Form submitted successfully</p>
-          <div className="error">
-            <Link to="/" className="btn btn-primary">
-              back home
-            </Link>
-          </div>
-        </div>
-      </section>
+      <>
+        <Contact />
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            Your form is submitted successfully!
+          </Alert>
+        </Snackbar>
+      </>
     );
   }
   return (
@@ -53,7 +73,7 @@ const Contact = () => {
       />
       <Container>
         <Card sx={{ mt: "2rem", mb: "2rem", padding: "2rem" }}>
-          <Typography variant="h6" textAlign={"center"}>
+          <Typography variant="h6" textAlign={"center"} gutterBottom>
             GET IN TOUCH
           </Typography>
           <form
@@ -121,7 +141,6 @@ const Contact = () => {
                   errors={state.errors}
                 />
               </FormControl>
-
               <Button
                 variant="contained"
                 sx={{
@@ -131,6 +150,7 @@ const Contact = () => {
                 }}
                 disabled={state.submitting}
                 type="submit"
+                onClick={handleClick}
               >
                 Submit
               </Button>
