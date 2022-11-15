@@ -205,14 +205,14 @@ const Home = () => {
                   <Stack direction="column" spacing={2}>
                     <img src={`${item.img}`} alt={"item.img"} loading="lazy" />
                     <Divider />
-                    <Typography variant="h6" fontWeight={700}>
+                    <Typography variant="h6" fontWeight={700} minHeight={90}>
                       {item.heading}
                     </Typography>
                     <Typography
                       variant="p"
                       fontWeight={500}
                       textAlign="justify"
-                      minHeight={100}
+                      minHeight={180}
                       sx={{ wordBreak: "break-word" }}
                     >
                       {item.para}
