@@ -6,12 +6,49 @@ import {
   Card,
   CardMedia,
   Typography,
-  Grid,
   Container,
+  Divider,
+  styled,
+  Paper,
+  Stack,
 } from "@mui/material";
 import hero from "../../images/home.jpg";
 import home1 from "../../images/home1.jpg";
+import Grid from "@mui/material/Unstable_Grid2";
+import devops from "../../images/home/devops.png";
+import fullstack from "../../images/home/full-stack.png";
+import aws from "../../images/home/logoaws.png";
+import react from "../../images/home/reactlogo.png";
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(2),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
 
+const dataStack = [
+  {
+    img: devops,
+    heading: " DevOps Job Support",
+    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+  },
+  {
+    img: fullstack,
+    heading: " AWS Job Support",
+    para: "Developer Professionals available for Job Support and Interview Support Service",
+  },
+  {
+    img: aws,
+    heading: "Full Stack JobSuppor ",
+    para: "Full Stack DevelopmentProfessionals available forJob Support and InterviewSupport Service",
+  },
+  {
+    img: react,
+    heading: " DevOps Job Support",
+    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+  },
+];
 const Home = () => {
   return (
     <Box>
@@ -127,6 +164,55 @@ const Home = () => {
             </Grid>
           </Grid>
         </Card>
+      </Container>
+      <Container>
+        <Typography variant="h5" textAlign={"center"}>
+          Our Popular Job Support
+          <Divider
+            sx={{
+              width: "20%",
+              color: "red",
+              margin: "0 auto",
+              borderColor: "blue",
+              borderBottomWidth: "medium",
+              mb: "1rem",
+              mt: "0.5rem",
+            }}
+          />
+        </Typography>
+
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 16 }}
+          mt="1rem"
+          mb="2rem"
+        >
+          {dataStack.map((item) => (
+            <Grid xs={2} sm={4} key={item.img}>
+              <Item>
+                <Box>
+                  <Stack direction="column" spacing={2}>
+                    <img src={`${item.img}`} alt={"item.img"} loading="lazy" />
+                    <Divider />
+                    <Typography variant="h6" fontWeight={700}>
+                      {item.heading}
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      fontWeight={500}
+                      textAlign="justify"
+                      minHeight={100}
+                      sx={{ wordBreak: "break-word" }}
+                    >
+                      {item.para}
+                    </Typography>
+                  </Stack>
+                </Box>
+              </Item>
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );
