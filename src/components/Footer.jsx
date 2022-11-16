@@ -7,7 +7,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import { Divider, Typography } from "@mui/material";
+import { Container, Divider, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 
 const Footer = () => {
@@ -28,7 +28,7 @@ const Footer = () => {
       }}
       component={"footer"}
     >
-      <Box
+      <Container
         width={"95vw"}
         margin="0 auto"
         pt="1rem"
@@ -39,7 +39,7 @@ const Footer = () => {
         }}
         gap="1rem"
       >
-        <UserBox>
+        <UserBox mt={"1rem"}>
           <EmailOutlinedIcon color="white" fontSize="large" />
           <Typography
             variant="h6"
@@ -60,7 +60,7 @@ const Footer = () => {
           flexItem
           sx={{ borderColor: "white" }}
         ></Divider>
-        <UserBox>
+        <UserBox mt={"1rem"}>
           <WhatsAppIcon fontSize="large" />
           <Typography
             variant="h6"
@@ -82,7 +82,7 @@ const Footer = () => {
           flexItem
           sx={{ borderColor: "white" }}
         ></Divider>
-        <UserBox>
+        <UserBox mt={"1rem"}>
           <Box display={"flex"} gap="1rem">
             <FacebookIcon />
             <InstagramIcon />
@@ -107,7 +107,7 @@ const Footer = () => {
             Copyright © 2022 All rights reserved for Advika Technology
           </Typography>
         </UserBox>
-      </Box>
+      </Container>
     </Box>
   );
 };
