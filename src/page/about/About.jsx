@@ -43,7 +43,13 @@ const About = () => {
                 </Typography>
               </Stack>
             </Grid>
-            <Grid item md={4}>
+            <Grid
+              item
+              md={4}
+              display="flex"
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
               <Card
                 sx={{ borderRadius: "24px 48px 24px 48px", boxShadow: "none" }}
               >
