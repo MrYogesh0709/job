@@ -35,9 +35,13 @@ const Footer = () => {
         pb="1rem"
         component={"div"}
         sx={{
-          display: { xs: "grid", md: "flex", justifyContent: "space-around" },
+          display: {
+            xs: "grid",
+            md: "flex",
+            justifyContent: "space-evenly",
+            gap: "1rem",
+          },
         }}
-        gap="1rem"
       >
         <UserBox mt={"1rem"}>
           <EmailOutlinedIcon color="white" fontSize="large" />
