@@ -35,137 +35,132 @@ const Navbar = () => {
     setOpenSub(!openSub);
   };
   return (
-    <Box component="div">
-      <AppBar position="static">
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              LOGO
-            </Typography>
+    <AppBar position="static">
+      <Container>
+        <Toolbar disableGutters>
+          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            LOGO
+          </Typography>
 
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                color="inherit"
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              color="inherit"
+              onClick={toggleSlider}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer open={open} anchor="left" onClose={toggleSlider}>
+              <Box
+                component="div"
+                sx={{
+                  width: 250,
+                }}
+                role="presentation"
                 onClick={toggleSlider}
               >
-                <MenuIcon />
-              </IconButton>
-              <Drawer open={open} anchor="left" onClose={toggleSlider}>
-                <Box
-                  component="div"
-                  sx={{
-                    width: 250,
-                  }}
-                  role="presentation"
-                  onClick={toggleSlider}
-                >
-                  <Sidebar />
-                </Box>
-                <Link
-                  to="/services"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  <ListItemButton onClick={handleClick}>
+                <Sidebar />
+              </Box>
+              <Link
+                to="/services"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <ListItemButton onClick={handleClick}>
+                  <ListItemIcon>
+                    <DesignServicesIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Services" />
+                  {openSub ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+              </Link>
+              <Collapse in={openSub} timeout="auto" unmountOnExit>
+                <List component="div" disablePadding>
+                  <ListItemButton sx={{ pl: 4 }} onClick={toggleSlider}>
                     <ListItemIcon>
-                      <DesignServicesIcon />
+                      <StarBorder />
                     </ListItemIcon>
-                    <ListItemText primary="Services" />
-                    {openSub ? <ExpandLess /> : <ExpandMore />}
+                    <ListItemText primary="Starred" />
                   </ListItemButton>
-                </Link>
-                <Collapse in={openSub} timeout="auto" unmountOnExit>
-                  <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }} onClick={toggleSlider}>
-                      <ListItemIcon>
-                        <StarBorder />
-                      </ListItemIcon>
-                      <ListItemText primary="Starred" />
-                    </ListItemButton>
-                  </List>
-                </Collapse>
-              </Drawer>
-            </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href=""
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
+                </List>
+              </Collapse>
+            </Drawer>
+          </Box>
+          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: "flex", md: "none" },
+              flexGrow: 1,
+              fontFamily: "monospace",
+              fontWeight: 700,
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            LOGO
+          </Typography>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "flex-end",
+              gap: "10px",
+            }}
+          >
+            <Link to={"/"} style={{ color: "inherit", textDecoration: "none" }}>
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
+                Home
+              </Button>
+            </Link>
+            <Link
+              to={"/about"}
+              style={{ color: "inherit", textDecoration: "none" }}
             >
-              LOGO
-            </Typography>
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: { xs: "none", md: "flex" },
-                justifyContent: "flex-end",
-                gap: "10px",
-              }}
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
+                About Us
+              </Button>
+            </Link>
+            <Link
+              to={"/services"}
+              style={{ color: "inherit", textDecoration: "none" }}
             >
-              <Link
-                to={"/"}
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  Home
-                </Button>
-              </Link>
-              <Link
-                to={"/about"}
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  About Us
-                </Button>
-              </Link>
-              <Link
-                to={"/services"}
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                <Popup />
-              </Link>
-              <Link
-                to={"/contact"}
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  Contact Us
-                </Button>
-              </Link>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </Box>
+              <Popup />
+            </Link>
+            <Link
+              to={"/contact"}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
+                Contact Us
+              </Button>
+            </Link>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
 
