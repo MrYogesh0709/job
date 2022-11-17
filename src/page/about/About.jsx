@@ -18,7 +18,7 @@ const About = () => {
           backgroundPositionX: "center",
           backgroundPositionY: "center",
           backgroundSize: "cover",
-          height: { xs: "300px", sm: "360px", md: "430px", lg: "500px" },
+          height: { xs: "200px", sm: "300px", md: "330px", lg: "350px" },
           width: "100%",
         }}
       />

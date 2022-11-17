@@ -61,15 +61,19 @@ const Home = () => {
           backgroundPositionX: "center",
           backgroundPositionY: "center",
           backgroundSize: "cover",
-          height: { xs: "400px", sm: "500px" },
+          height: { xs: "250px", sm: "300px", md: "330px", lg: "350px" },
           width: "100%",
         }}
       >
         <Box
           sx={{
-            width: { xs: "100%", sm: "40%" },
+            // width: { xs: "100%", sm: "40%" },
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             margin: "0 auto",
             paddingTop: "4rem",
+            height: { xs: "200px", sm: "300px", md: "330px", lg: "350px" },
           }}
         >
           <Box sx={{ opacity: "0.8" }}>
@@ -83,6 +87,7 @@ const Home = () => {
               alignItems="center"
               backgroundColor="rgba(0,0,0,.6)"
               marginBottom={"1rem"}
+              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
             >
               Job Support From India
             </Typography>
@@ -96,7 +101,8 @@ const Home = () => {
               color={"white"}
               alignItems="center"
               backgroundColor="#9e9e9e"
-              marginBottom={"1rem"}
+              marginBottom={"0.5rem"}
+              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
             >
               By Experinced IT Proffessionals
             </Typography>
@@ -110,7 +116,8 @@ const Home = () => {
               color={"white"}
               alignItems="center"
               backgroundColor="rgba(0,0,0,.6)"
-              marginBottom={"1rem"}
+              marginBottom={"0.5rem"}
+              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
             >
               Get Job Support by Real time Experts
             </Typography>
@@ -125,7 +132,10 @@ const Home = () => {
             <Button
               variant="contained"
               color="success"
-              sx={{ marginLeft: "20px", textDecoration: "none" }}
+              sx={{
+                marginLeft: "20px",
+                textDecoration: "none",
+              }}
               component="a"
               target="_blank"
               href="https://api.whatsapp.com/send?phone=+916280811923"

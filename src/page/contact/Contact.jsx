@@ -63,10 +63,10 @@ const Contact = () => {
           backgroundSize: "cover",
           height: {
             xs: "200px",
-            sm: "350px",
-            md: "500px",
-            lg: "550px",
-            xl: "650px",
+            sm: "250px",
+            md: "300px",
+            lg: "350px",
+            xl: "400px",
           },
           width: "100%",
         }}
