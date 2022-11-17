@@ -25,8 +25,8 @@ function App() {
             element={<Jobservices />}
           />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </>
   );
 }

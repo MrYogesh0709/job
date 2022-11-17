@@ -7,8 +7,9 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import { Container, Divider, Typography } from "@mui/material";
+import { Button, Container, Divider, Typography } from "@mui/material";
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const UserBox = styled(Box)(({ theme }) => ({
@@ -146,7 +147,10 @@ const Footer = () => {
             </Typography>
           </Box>
           <Typography variant="h7" color={"white"} textAlign="center">
-            Copyright © 2022 All rights reserved for Advika Technology
+            Copyright © 2022 All rights reserved for &nbsp;
+            <Link to={"/"} style={{ color: "skyblue", textDecoration: "none" }}>
+              Advika Technology
+            </Link>
           </Typography>
         </UserBox>
       </Container>
