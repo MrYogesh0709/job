@@ -85,6 +85,11 @@ const Navbar = () => {
           </Box>
 
           <Link to="/">
+            <Box
+              display="flex"
+              justifyContent={"center"}
+              alignItems="center"
+            ></Box>
             <img src={`${logo}`} alt="aobut_us" loading="lazy" size="cover" />
           </Link>
           <Box
