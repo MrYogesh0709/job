@@ -97,7 +97,7 @@ const Workwithus = () => {
           Work With Us
         </Typography>
         <Divider />
-        <Typography mt={"1rem"} p={"0 1rem"}>
+        <Typography mt={"1rem"} p={"0 1rem"} textAlign="center">
           Are you a top professional in your field, with a passion to teach and
           share your knowledge and industry experience? We're looking for
           qualified trainers with expertise, passion, and teaching experience.
@@ -156,8 +156,8 @@ const Workwithus = () => {
                   type="tel"
                   pattern="[0-9]{10}"
                   required
-                  label="Whattsapp Number"
-                  name="Whattsapp Number"
+                  label="Whatsapp Number"
+                  name="Whatsapp Number"
                   variant="outlined"
                   sx={{ width: "100%" }}
                 />

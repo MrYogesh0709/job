@@ -23,6 +23,7 @@ import StarBorder from "@mui/icons-material/StarBorder";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ExpandLess from "@mui/icons-material/ExpandLess";
+import logo from "../images/logo/logo2.png";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -38,8 +39,8 @@ const Navbar = () => {
     <AppBar position="static">
       <Container>
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
+          <img src={`${logo}`} alt="aobut_us" loading="lazy" size="cover" />
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -55,7 +56,7 @@ const Navbar = () => {
             }}
           >
             LOGO
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -149,20 +150,21 @@ const Navbar = () => {
             >
               <Popup />
             </Link>
-            <Link
-              to={"/workwithus"}
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
-                Work With Us
-              </Button>
-            </Link>
+
             <Link
               to={"/contact"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
               <Button sx={{ my: 2, color: "white", display: "block" }}>
                 Contact Us
+              </Button>
+            </Link>
+            <Link
+              to={"/workwithus"}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
+                Work With Us
               </Button>
             </Link>
           </Box>

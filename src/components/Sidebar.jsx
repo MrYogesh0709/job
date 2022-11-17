@@ -47,17 +47,7 @@ const Sidebar = () => {
             <ListItemText primary="About Us" color="black" />
           </ListItemButton>
         </Link>
-        <Link
-          to="/workwithus"
-          style={{ color: "inherit", textDecoration: "none" }}
-        >
-          <ListItemButton>
-            <ListItemIcon>
-              <Diversity3Icon />
-            </ListItemIcon>
-            <ListItemText primary="Work With Us" color="black" />
-          </ListItemButton>
-        </Link>
+
         <Link
           to="/contact"
           style={{ color: "inherit", textDecoration: "none" }}
@@ -67,6 +57,17 @@ const Sidebar = () => {
               <ContactPageIcon />
             </ListItemIcon>
             <ListItemText primary="Contact Us" color="black" />
+          </ListItemButton>
+        </Link>
+        <Link
+          to="/workwithus"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <ListItemButton>
+            <ListItemIcon>
+              <Diversity3Icon />
+            </ListItemIcon>
+            <ListItemText primary="Work With Us" color="black" />
           </ListItemButton>
         </Link>
       </List>

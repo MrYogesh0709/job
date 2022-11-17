@@ -127,9 +127,9 @@ const Contact = () => {
               </FormControl>
               <FormControl>
                 <TextField
-                  label="Message"
+                  label="Requirment"
                   type="text"
-                  placeholder="Enter your message"
+                  placeholder="Share Your Requirment Here"
                   id="message"
                   name="Message"
                   multiline
