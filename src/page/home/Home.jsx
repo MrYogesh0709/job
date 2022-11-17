@@ -35,13 +35,13 @@ const dataStack = [
     para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
   },
   {
-    img: fullstack,
+    img: aws,
     heading: " AWS Job Support",
     para: "Developer Professionals available for Job Support and Interview Support Service",
   },
   {
-    img: aws,
-    heading: "Full Stack JobSuppor ",
+    img: fullstack,
+    heading: "Full Stack JobSupport ",
     para: "Full Stack DevelopmentProfessionals available forJob Support and InterviewSupport Service",
   },
   {
@@ -61,7 +61,7 @@ const Home = () => {
           backgroundPositionX: "center",
           backgroundPositionY: "center",
           backgroundSize: "cover",
-          height: { xs: "250px", sm: "300px", md: "330px", lg: "350px" },
+          height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
           width: "100%",
         }}
       >
@@ -72,7 +72,6 @@ const Home = () => {
             justifyContent: "center",
             alignItems: "center",
             margin: "0 auto",
-            paddingTop: "4rem",
             height: { xs: "200px", sm: "300px", md: "330px", lg: "350px" },
           }}
         >

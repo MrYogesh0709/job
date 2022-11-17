@@ -62,11 +62,10 @@ const Contact = () => {
           backgroundPositionY: "center",
           backgroundSize: "cover",
           height: {
-            xs: "200px",
-            sm: "250px",
-            md: "300px",
-            lg: "350px",
-            xl: "400px",
+            xs: "230px",
+            sm: "280px",
+            md: "280px",
+            lg: "300px",
           },
           width: "100%",
         }}
