@@ -5,7 +5,6 @@ import {
   ListItemButton,
   ListItemIcon,
 } from "@mui/material";
-import React from "react";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";

@@ -72,7 +72,7 @@ const Contact = () => {
       />
       <Container>
         <Card sx={{ mt: "2rem", mb: "2rem", padding: "2rem" }}>
-          <Typography variant="h6" textAlign={"center"} gutterBottom>
+          <Typography variant="h5" textAlign={"center"} gutterBottom>
             GET IN TOUCH
           </Typography>
           <form
@@ -91,6 +91,7 @@ const Contact = () => {
                   type="text"
                   variant="outlined"
                   sx={{ width: "100%" }}
+                  helperText="Please enter your name"
                 />
               </FormControl>
               <FormControl>

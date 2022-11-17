@@ -24,6 +24,7 @@ import azure from "../../images/home/azure.png";
 import net from "../../images/home/net.avif";
 import react from "../../images/home/reactlogo.png";
 import { Link } from "react-router-dom";
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,

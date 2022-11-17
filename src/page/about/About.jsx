@@ -1,7 +1,12 @@
-import React from "react";
-import { Box } from "@mui/system";
-import Container from "@mui/material/Container";
-import { Card, Divider, Grid, Stack, Typography } from "@mui/material";
+import {
+  Card,
+  Divider,
+  Grid,
+  Stack,
+  Typography,
+  Container,
+  Box,
+} from "@mui/material";
 import about_us from "../../images/about/about_us.avif";
 import about from "../../images/about/about.jpg";
 import why from "../../images/about/why.avif";
