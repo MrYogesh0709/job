@@ -7,7 +7,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import { Button, Container, Divider, Typography } from "@mui/material";
+import { Container, Divider, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
