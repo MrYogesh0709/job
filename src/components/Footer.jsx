@@ -44,11 +44,18 @@ const Footer = () => {
         }}
       >
         <UserBox mt={"1rem"}>
-          <EmailOutlinedIcon color="white" fontSize="large" />
+          <Box
+            component={"a"}
+            href="mailto:advikatechnology.1207@gmail.com"
+            target={"_blank"}
+          >
+            <EmailOutlinedIcon color="primary" fontSize="large" />
+          </Box>
+
           <Typography
             variant="h6"
             component="a"
-            color="white"
+            color={"skyblue"}
             href="mailto:advikatechnology.1207@gmail.com"
             sx={{ textDecoration: "none" }}
             target="_blank"
@@ -65,10 +72,16 @@ const Footer = () => {
           sx={{ borderColor: "white" }}
         ></Divider>
         <UserBox mt={"1rem"}>
-          <WhatsAppIcon fontSize="large" />
+          <Box
+            component={"a"}
+            href="https://api.whatsapp.com/send?phone=+916280811923"
+            target={"_blank"}
+          >
+            <WhatsAppIcon fontSize="large" color="success" />
+          </Box>
           <Typography
             variant="h6"
-            color={"white"}
+            color={"skyblue"}
             textAlign={"center"}
             component="a"
             target="_blank"
@@ -88,16 +101,41 @@ const Footer = () => {
         ></Divider>
         <UserBox mt={"1rem"}>
           <Box display={"flex"} gap="1rem">
-            <FacebookIcon />
-            <InstagramIcon />
-            <TwitterIcon />
-            <TelegramIcon />
+            <Box
+              component={"a"}
+              href="https://www.facebook.com/profile.php?id=100071928532135&mibextid=LQQJ4d"
+              target="_blank"
+              color="#1DA1F2"
+            >
+              <FacebookIcon />
+            </Box>
+            <Box
+              component={"a"}
+              href="https://www.instagram.com/invites/contact/?i=9w4xyd67maqe&utm_content=pwb8n3k"
+              target="_blank"
+            >
+              <InstagramIcon color={"primary"} />
+            </Box>
+            <Box component={"a"} href="" target="_blank" color="#229ED9">
+              <TwitterIcon />
+            </Box>
+            <Box
+              component={"a"}
+              href="https://t.me/advika_technology"
+              target="_blank"
+              color="#1DA1F2"
+            >
+              <TelegramIcon />
+            </Box>
           </Box>
           <Box display={"flex"} gap="1rem" alignItems={"center"}>
-            <CallOutlinedIcon />
+            <Box component={"a"} href="tel: +91 6280811923">
+              <CallOutlinedIcon />
+            </Box>
+
             <Typography
               variant="h6"
-              color={"white"}
+              color={"skyblue"}
               textAlign={"center"}
               component="a"
               target="_blank"
