@@ -1,11 +1,4 @@
-import {
-  Avatar,
-  Container,
-  Divider,
-  List,
-  ListItemButton,
-  ListItemIcon,
-} from "@mui/material";
+import { List, ListItemButton, ListItemIcon } from "@mui/material";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
