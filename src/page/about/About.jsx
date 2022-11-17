@@ -74,7 +74,7 @@ const About = () => {
             display="flex"
             justifyContent={"center"}
             alignItems={"center"}
-            sx={{ display: { xs: "none", md: "block" } }}
+            sx={{ display: { xs: "none", md: "flex" } }}
           >
             <Card
               sx={{ borderRadius: "24px 48px 24px 48px", boxShadow: "none" }}
