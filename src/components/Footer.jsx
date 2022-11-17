@@ -101,10 +101,10 @@ const Footer = () => {
               textAlign={"center"}
               component="a"
               target="_blank"
-              href="tel: +91 9993889052"
+              href="tel: +91 6280811923"
               sx={{ textDecoration: "none" }}
             >
-              +91 9993889052
+              +91 6280811923
             </Typography>
           </Box>
           <Typography variant="h7" color={"white"} textAlign="center">
