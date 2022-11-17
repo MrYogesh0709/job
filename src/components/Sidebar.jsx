@@ -48,7 +48,7 @@ const Sidebar = () => {
           </ListItemButton>
         </Link>
         <Link
-          to="/contact"
+          to="/workwithus"
           style={{ color: "inherit", textDecoration: "none" }}
         >
           <ListItemButton>
