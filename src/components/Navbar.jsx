@@ -150,6 +150,14 @@ const Navbar = () => {
               <Popup />
             </Link>
             <Link
+              to={"/workwithus"}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
+                Work With Us
+              </Button>
+            </Link>
+            <Link
               to={"/contact"}
               style={{ color: "inherit", textDecoration: "none" }}
             >

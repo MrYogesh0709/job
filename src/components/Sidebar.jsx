@@ -10,6 +10,7 @@ import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import Diversity3Icon from "@mui/icons-material/Diversity3";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -45,6 +46,17 @@ const Sidebar = () => {
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="About Us" color="black" />
+          </ListItemButton>
+        </Link>
+        <Link
+          to="/contact"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <ListItemButton>
+            <ListItemIcon>
+              <Diversity3Icon />
+            </ListItemIcon>
+            <ListItemText primary="Work With Us" color="black" />
           </ListItemButton>
         </Link>
         <Link

@@ -65,7 +65,7 @@ const dataStack = [
   },
   {
     img: net,
-    heading: "dot net support",
+    heading: "Dot net support",
     para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
   },
   {
@@ -262,7 +262,12 @@ const Home = () => {
                       height="135px"
                     />
                     <Divider />
-                    <Typography variant="h6" fontWeight={700} minHeight={90}>
+                    <Typography
+                      variant="h6"
+                      fontWeight={700}
+                      minHeight={90}
+                      textTransform="capitalize"
+                    >
                       {item.heading}
                     </Typography>
                     <Typography
