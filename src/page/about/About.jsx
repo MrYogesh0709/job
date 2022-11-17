@@ -5,6 +5,7 @@ import { Card, Divider, Grid, Stack, Typography } from "@mui/material";
 import about_us from "../../images/about/about_us.avif";
 import about from "../../images/about/about.jpg";
 import why from "../../images/about/why.avif";
+import work from "../../images/about/work.avif";
 
 const About = () => {
   return (
@@ -178,7 +179,7 @@ const About = () => {
               sx={{ borderRadius: "24px 48px 24px 48px", boxShadow: "none" }}
             >
               <img
-                src={`${about_us}`}
+                src={`${work}`}
                 alt="aobut_us"
                 loading="lazy"
                 width={"100%"}
