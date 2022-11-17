@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Container,
   Divider,
   List,
   ListItemButton,
@@ -11,21 +12,24 @@ import InfoIcon from "@mui/icons-material/Info";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import { Link } from "react-router-dom";
+import logo from "../images/logo/logo1.png";
+import { Box } from "@mui/system";
 
 const Sidebar = () => {
   return (
     <>
-      <Avatar
-        alt="Remy Sharp"
-        src="/static/images/avatar/1.jpg"
-        sx={{
-          width: 56,
-          height: 56,
-          margin: "0.5rem auto",
-          padding: "1rem",
-        }}
-      />
-      <Divider />
+      <Box sx={{ width: "100%" }}>
+        <Link to="/">
+          <img
+            src={`${logo}`}
+            alt="aobut_us"
+            loading="lazy"
+            size="cover"
+            width={"100%"}
+          />
+        </Link>
+      </Box>
+
       <List
         sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
         component="nav"
