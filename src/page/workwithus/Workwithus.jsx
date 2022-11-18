@@ -82,7 +82,7 @@ const Workwithus = () => {
               marginBottom={"1rem"}
               fontSize={{ xs: "2rem", md: "3rem" }}
               sx={{
-                backgroundImage: "linear-gradient(180deg,green,red)",
+                backgroundImage: "linear-gradient(180deg,green,red,blue)",
                 backgroundClip: "text",
                 color: "transparent",
               }}

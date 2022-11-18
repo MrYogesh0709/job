@@ -12,7 +12,7 @@ import {
   Paper,
   Stack,
 } from "@mui/material";
-import hero from "../../images/home.jpg";
+import logo from "../../images/logo/sdfd.png";
 import home1 from "../../images/home1.jpg";
 import data from "../../images/home/data.jpg";
 import Grid from "@mui/material/Unstable_Grid2";
@@ -80,94 +80,22 @@ const Home = () => {
     <Box>
       <Box
         sx={{
-          backgroundImage: `url(${hero})`,
-          backgroundRepeat: "no-repeat",
           backgroundColor: "black",
-          backgroundPositionX: "center",
-          backgroundPositionY: "center",
-          backgroundSize: "cover",
-          height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
-          width: "100%",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <Box
+          component="img"
           sx={{
-            // width: { xs: "100%", sm: "40%" },
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "0 auto",
-            height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
+            height: 300,
+            width: "100%",
+            maxHeight: { xs: 300, md: 300 },
+            maxWidth: { xs: 350, md: 550 },
           }}
-        >
-          <Box sx={{ opacity: "0.8" }}>
-            <Typography
-              variant="h5"
-              lineHeight={1.2}
-              fontWeight="600"
-              padding={"10px"}
-              display={"inline-block"}
-              color={"#ffffff"}
-              alignItems="center"
-              backgroundColor="rgba(0,0,0,.6)"
-              marginBottom={"1rem"}
-              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
-            >
-              Job Support From India
-            </Typography>
-            <br />
-            <Typography
-              variant="h5"
-              lineHeight={1.2}
-              fontWeight="600"
-              padding={"10px"}
-              display={"inline-block"}
-              color={"white"}
-              alignItems="center"
-              backgroundColor="#9e9e9e"
-              marginBottom={"0.5rem"}
-              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
-            >
-              By Experinced IT Proffessionals
-            </Typography>
-            <br />
-            <Typography
-              variant="h5"
-              fontWeight="600"
-              padding={"10px"}
-              display={"inline-block"}
-              lineHeight={1.2}
-              color={"white"}
-              alignItems="center"
-              backgroundColor="rgba(0,0,0,.6)"
-              marginBottom={"0.5rem"}
-              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
-            >
-              Get Job Support by Real time Experts
-            </Typography>
-            <br />
-            <Link
-              to="/services"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              <Button variant="contained">More Details</Button>
-            </Link>
-
-            <Button
-              variant="contained"
-              color="success"
-              sx={{
-                marginLeft: "20px",
-                textDecoration: "none",
-              }}
-              component="a"
-              target="_blank"
-              href="https://api.whatsapp.com/send?phone=+916280811923"
-            >
-              Whatsapp
-            </Button>
-          </Box>
-        </Box>
+          alt="The house from the offer."
+          src={logo}
+        />
       </Box>
       <Container>
         <Card sx={{ margin: "2rem 0" }}>

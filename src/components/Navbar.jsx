@@ -85,12 +85,9 @@ const Navbar = () => {
           </Box>
 
           <Link to="/">
-            <Box
-              display="flex"
-              justifyContent={"center"}
-              alignItems="center"
-            ></Box>
-            <img src={`${logo}`} alt="aobut_us" loading="lazy" size="cover" />
+            <Box display="flex" justifyContent={"center"} alignItems="center">
+              <img src={`${logo}`} alt="aobut_us" loading="lazy" size="cover" />
+            </Box>
           </Link>
           <Box
             sx={{
@@ -117,6 +114,9 @@ const Navbar = () => {
               to={"/services"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
+              {/* <Button sx={{ my: 2, color: "white", display: "block" }}>
+                Services
+              </Button> */}
               <Popup />
             </Link>
 

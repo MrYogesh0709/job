@@ -5,10 +5,12 @@ import {
   Stack,
   Typography,
   Container,
+  Button,
   Box,
 } from "@mui/material";
 import about_us from "../../images/about/about_us.avif";
-import about from "../../images/about/about.jpg";
+import { Link } from "react-router-dom";
+import hero from "../../images/home.jpg";
 import why from "../../images/about/why.avif";
 import work from "../../images/about/work.avif";
 
@@ -17,7 +19,7 @@ const About = () => {
     <>
       <Box
         sx={{
-          backgroundImage: `url(${about})`,
+          backgroundImage: `url(${hero})`,
           backgroundRepeat: "no-repeat",
           backgroundColor: "black",
           backgroundPositionX: "center",
@@ -26,7 +28,85 @@ const About = () => {
           height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
           width: "100%",
         }}
-      />
+      >
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            margin: "0 auto",
+            height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
+          }}
+        >
+          <Box sx={{ opacity: "0.8" }}>
+            <Typography
+              variant="h5"
+              lineHeight={1.2}
+              fontWeight="600"
+              padding={"10px"}
+              display={"inline-block"}
+              color={"#ffffff"}
+              alignItems="center"
+              backgroundColor="rgba(0,0,0,.6)"
+              marginBottom={"1rem"}
+              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
+            >
+              Job Support From India
+            </Typography>
+            <br />
+            <Typography
+              variant="h5"
+              lineHeight={1.2}
+              fontWeight="600"
+              padding={"10px"}
+              display={"inline-block"}
+              color={"white"}
+              alignItems="center"
+              backgroundColor="#9e9e9e"
+              marginBottom={"0.5rem"}
+              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
+            >
+              By Experinced IT Proffessionals
+            </Typography>
+            <br />
+            <Typography
+              variant="h5"
+              fontWeight="600"
+              padding={"10px"}
+              display={"inline-block"}
+              lineHeight={1.2}
+              color={"white"}
+              alignItems="center"
+              backgroundColor="rgba(0,0,0,.6)"
+              marginBottom={"0.5rem"}
+              fontSize={{ xs: "1rem", sm: "1.5rem", md: "2rem" }}
+            >
+              Get Job Support by Real time Experts
+            </Typography>
+            <br />
+            <Link
+              to="/services"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <Button variant="contained">More Details</Button>
+            </Link>
+
+            <Button
+              variant="contained"
+              color="success"
+              sx={{
+                marginLeft: "20px",
+                textDecoration: "none",
+              }}
+              component="a"
+              target="_blank"
+              href="https://api.whatsapp.com/send?phone=+916280811923"
+            >
+              Whatsapp
+            </Button>
+          </Box>
+        </Box>
+      </Box>
       <Container sx={{ mt: "2rem", mb: "2rem" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={8}>
