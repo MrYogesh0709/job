@@ -10,7 +10,11 @@
 }
 
 .logo .sidebar-name {
-  transition: all 0.3s ease-in-out;
+  display: block;
+  transition: all 5s ease-out;
+  -webkit-transition: all 5s ease-out;
+  -moz-transition: all 5s ease-out;
+  -o-transition: all 5s ease-out;
 }
 
 .logo:hover {
