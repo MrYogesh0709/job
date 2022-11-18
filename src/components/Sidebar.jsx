@@ -1,4 +1,4 @@
-import { List, ListItemButton, ListItemIcon } from "@mui/material";
+import { List, ListItemButton, ListItemIcon, styled } from "@mui/material";
 import ListItemText from "@mui/material/ListItemText";
 import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
@@ -8,6 +8,15 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo/logo1.png";
 import { Box } from "@mui/system";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
+
+const StyledListItemText = styled(ListItemText)({
+  "&:hover": {
+    color: "skyblue",
+  },
+  "&:active": {
+    color: "greenyellow",
+  },
+});
 
 const Sidebar = () => {
   return (
@@ -34,7 +43,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="Home" />
+            <StyledListItemText primary="Home" />
           </ListItemButton>
         </Link>
 
@@ -43,7 +52,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <ListItemText primary="About Us" color="black" />
+            <StyledListItemText primary="About Us" color="black" />
           </ListItemButton>
         </Link>
 
@@ -55,7 +64,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <DesignServicesIcon />
             </ListItemIcon>
-            <ListItemText primary="Services" />
+            <StyledListItemText primary="Services" />
           </ListItemButton>
         </Link>
 
@@ -67,7 +76,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <ContactPageIcon />
             </ListItemIcon>
-            <ListItemText primary="Contact Us" color="black" />
+            <StyledListItemText primary="Contact Us" color="black" />
           </ListItemButton>
         </Link>
         <Link
@@ -78,7 +87,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <Diversity3Icon />
             </ListItemIcon>
-            <ListItemText primary="Work With Us" color="black" />
+            <StyledListItemText primary="Work With Us" color="black" />
           </ListItemButton>
         </Link>
       </List>

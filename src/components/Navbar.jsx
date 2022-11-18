@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import {
   // Collapse,
   Drawer,
+  styled,
   // List,
   // ListItemButton,
   // ListItemIcon,
@@ -22,6 +23,15 @@ import Sidebar from "./Sidebar";
 // import ExpandMore from "@mui/icons-material/ExpandMore";
 // import ExpandLess from "@mui/icons-material/ExpandLess";
 import logo from "../images/logo/logo2.png";
+
+const StyledButton = styled(Button)({
+  "&:hover": {
+    color: "skyblue",
+  },
+  "&:active": {
+    color: "greenyellow",
+  },
+});
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
@@ -98,25 +108,25 @@ const Navbar = () => {
             }}
           >
             <Link to={"/"} style={{ color: "inherit", textDecoration: "none" }}>
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
+              <StyledButton sx={{ my: 2, color: "white", display: "block" }}>
                 Home
-              </Button>
+              </StyledButton>
             </Link>
             <Link
               to={"/about"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
+              <StyledButton sx={{ my: 2, color: "white", display: "block" }}>
                 About Us
-              </Button>
+              </StyledButton>
             </Link>
             <Link
               to={"/services"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
+              <StyledButton sx={{ my: 2, color: "white", display: "block" }}>
                 Services
-              </Button>
+              </StyledButton>
               {/* <Popup /> */}
             </Link>
 
@@ -124,17 +134,17 @@ const Navbar = () => {
               to={"/contact"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
+              <StyledButton sx={{ my: 2, color: "white", display: "block" }}>
                 Contact Us
-              </Button>
+              </StyledButton>
             </Link>
             <Link
               to={"/workwithus"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              <Button sx={{ my: 2, color: "white", display: "block" }}>
+              <StyledButton sx={{ my: 2, color: "white", display: "block" }}>
                 Work With Us
-              </Button>
+              </StyledButton>
             </Link>
           </Box>
         </Toolbar>
