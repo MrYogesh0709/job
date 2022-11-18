@@ -9,10 +9,13 @@
   text-decoration: none;
 }
 
-.logo {
+.logo .sidebar-name {
   transition: all 0.3s ease-in-out;
 }
 
 .logo:hover {
   transform: scale(1.5);
+}
+.sidebar-name:hover {
+  transform: translateX(5%);
 }

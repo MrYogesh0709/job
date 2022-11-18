@@ -43,7 +43,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <StyledListItemText primary="Home" />
+            <StyledListItemText primary="Home" className="sidebar-name" />
           </ListItemButton>
         </Link>
 
@@ -52,7 +52,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
-            <StyledListItemText primary="About Us" color="black" />
+            <StyledListItemText primary="About Us" className="sidebar-name" />
           </ListItemButton>
         </Link>
 
@@ -64,7 +64,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <DesignServicesIcon />
             </ListItemIcon>
-            <StyledListItemText primary="Services" />
+            <StyledListItemText primary="Services" className="sidebar-name" />
           </ListItemButton>
         </Link>
 
@@ -76,7 +76,7 @@ const Sidebar = () => {
             <ListItemIcon>
               <ContactPageIcon />
             </ListItemIcon>
-            <StyledListItemText primary="Contact Us" color="black" />
+            <StyledListItemText primary="Contact Us" className="sidebar-name" />
           </ListItemButton>
         </Link>
         <Link
@@ -87,7 +87,10 @@ const Sidebar = () => {
             <ListItemIcon>
               <Diversity3Icon />
             </ListItemIcon>
-            <StyledListItemText primary="Work With Us" color="black" />
+            <StyledListItemText
+              primary="Work With Us"
+              className="sidebar-name"
+            />
           </ListItemButton>
         </Link>
       </List>
