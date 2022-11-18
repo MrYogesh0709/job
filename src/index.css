@@ -1,8 +1,18 @@
-* {
+*,
+::after,
+::before {
   margin: 0;
   box-sizing: border-box;
 }
 
 .link-navbar {
   text-decoration: none;
+}
+
+.logo {
+  transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.5);
 }

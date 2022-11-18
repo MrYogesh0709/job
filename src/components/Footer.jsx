@@ -50,7 +50,11 @@ const Footer = () => {
             href="mailto:advikatechnology.1207@gmail.com"
             target={"_blank"}
           >
-            <EmailOutlinedIcon color="primary" fontSize="large" />
+            <EmailOutlinedIcon
+              color="primary"
+              fontSize="large"
+              className="logo"
+            />
           </Box>
 
           <Typography
@@ -78,7 +82,7 @@ const Footer = () => {
             href="https://api.whatsapp.com/send?phone=+916280811923"
             target={"_blank"}
           >
-            <WhatsAppIcon fontSize="large" color="success" />
+            <WhatsAppIcon fontSize="large" color="success" className="logo" />
           </Box>
           <Typography
             variant="h6"
@@ -108,17 +112,17 @@ const Footer = () => {
               target="_blank"
               color="#1DA1F2"
             >
-              <FacebookIcon />
+              <FacebookIcon className="logo" />
             </Box>
             <Box
               component={"a"}
               href="https://www.instagram.com/invites/contact/?i=9w4xyd67maqe&utm_content=pwb8n3k"
               target="_blank"
             >
-              <InstagramIcon color={"primary"} />
+              <InstagramIcon color={"primary"} className="logo" />
             </Box>
             <Box component={"a"} href="" target="_blank" color="#229ED9">
-              <TwitterIcon />
+              <TwitterIcon className="logo" />
             </Box>
             <Box
               component={"a"}
@@ -126,12 +130,12 @@ const Footer = () => {
               target="_blank"
               color="#1DA1F2"
             >
-              <TelegramIcon />
+              <TelegramIcon className="logo" />
             </Box>
           </Box>
           <Box display={"flex"} gap="1rem" alignItems={"center"}>
             <Box component={"a"} href="tel: +91 6280811923">
-              <CallOutlinedIcon />
+              <CallOutlinedIcon className="logo" />
             </Box>
 
             <Typography
