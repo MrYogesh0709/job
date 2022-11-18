@@ -6,7 +6,6 @@ import About from "./page/about/About";
 import Contact from "./page/contact/Contact";
 import Footer from "./components/Footer";
 import Services from "./page/services/Services";
-import Jobservices from "./page/services/Jobservices";
 import Workwithus from "./page/workwithus/Workwithus";
 
 function App() {
@@ -20,10 +19,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/workwithus" element={<Workwithus />} />
-          <Route
-            path="/services/job-support-services"
-            element={<Jobservices />}
-          />
         </Routes>
         <Footer />
       </BrowserRouter>

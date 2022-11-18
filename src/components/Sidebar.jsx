@@ -7,6 +7,7 @@ import Diversity3Icon from "@mui/icons-material/Diversity3";
 import { Link } from "react-router-dom";
 import logo from "../images/logo/logo1.png";
 import { Box } from "@mui/system";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
 
 const Sidebar = () => {
   return (
@@ -36,12 +37,25 @@ const Sidebar = () => {
             <ListItemText primary="Home" />
           </ListItemButton>
         </Link>
+
         <Link to="/about" style={{ color: "inherit", textDecoration: "none" }}>
           <ListItemButton>
             <ListItemIcon>
               <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="About Us" color="black" />
+          </ListItemButton>
+        </Link>
+
+        <Link
+          to="/services"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <ListItemButton>
+            <ListItemIcon>
+              <DesignServicesIcon />
+            </ListItemIcon>
+            <ListItemText primary="Services" />
           </ListItemButton>
         </Link>
 

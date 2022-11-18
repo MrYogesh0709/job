@@ -8,31 +8,31 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import {
-  Collapse,
+  // Collapse,
   Drawer,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
+  // List,
+  // ListItemButton,
+  // ListItemIcon,
+  // ListItemText,
 } from "@mui/material";
 import Sidebar from "./Sidebar";
-import Popup from "./Popup";
-import StarBorder from "@mui/icons-material/StarBorder";
-import DesignServicesIcon from "@mui/icons-material/DesignServices";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import ExpandLess from "@mui/icons-material/ExpandLess";
+// import Popup from "./Popup";
+// import StarBorder from "@mui/icons-material/StarBorder";
+// import DesignServicesIcon from "@mui/icons-material/DesignServices";
+// import ExpandMore from "@mui/icons-material/ExpandMore";
+// import ExpandLess from "@mui/icons-material/ExpandLess";
 import logo from "../images/logo/logo2.png";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
-  const [openSub, setOpenSub] = React.useState(true);
+  // const [openSub, setOpenSub] = React.useState(true);
 
   const toggleSlider = () => {
     setOpen(!open);
   };
-  const handleClick = () => {
-    setOpenSub(!openSub);
-  };
+  // const handleClick = () => {
+  //   setOpenSub(!openSub);
+  // };
   return (
     <AppBar position="static" sx={{ backgroundColor: "black" }}>
       <Container>
@@ -59,7 +59,7 @@ const Navbar = () => {
               >
                 <Sidebar />
               </Box>
-              <Link
+              {/* <Link
                 to="/services"
                 style={{ color: "inherit", textDecoration: "none" }}
               >
@@ -70,8 +70,8 @@ const Navbar = () => {
                   <ListItemText primary="Services" />
                   {openSub ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
-              </Link>
-              <Collapse in={openSub} timeout="auto" unmountOnExit>
+              </Link> */}
+              {/* <Collapse in={openSub} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                   <ListItemButton sx={{ pl: 4 }} onClick={toggleSlider}>
                     <ListItemIcon>
@@ -80,7 +80,7 @@ const Navbar = () => {
                     <ListItemText primary="Starred" />
                   </ListItemButton>
                 </List>
-              </Collapse>
+              </Collapse> */}
             </Drawer>
           </Box>
 
@@ -114,10 +114,10 @@ const Navbar = () => {
               to={"/services"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              {/* <Button sx={{ my: 2, color: "white", display: "block" }}>
+              <Button sx={{ my: 2, color: "white", display: "block" }}>
                 Services
-              </Button> */}
-              <Popup />
+              </Button>
+              {/* <Popup /> */}
             </Link>
 
             <Link
