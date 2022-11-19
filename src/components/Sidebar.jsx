@@ -143,7 +143,7 @@ const Sidebar = () => {
                     </List>
                   </Link>
                   <Link
-                    to="/jobsupportservices"
+                    to="/certification"
                     style={{ color: "inherit", textDecoration: "none" }}
                     onClick={toggleSlider}
                   >

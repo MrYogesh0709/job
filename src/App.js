@@ -7,6 +7,7 @@ import Contact from "./page/contact/Contact";
 import Footer from "./components/Footer";
 import Workwithus from "./page/workwithus/Workwithus";
 import Jobsuopportservices from "./page/services/Job_support_services";
+import Certification from "./page/services/Certification";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/jobsupportservices" element={<Jobsuopportservices />} />
           <Route path="/workwithus" element={<Workwithus />} />
+          <Route path="/certification" element={<Certification />} />
         </Routes>
         <Footer />
       </BrowserRouter>
