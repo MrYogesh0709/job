@@ -1,57 +1,57 @@
 import React from "react";
 import {
-  Alert,
+  // Alert,
   Box,
-  Button,
-  Card,
-  Container,
-  Divider,
-  FormControl,
-  FormHelperText,
-  Snackbar,
-  Stack,
-  TextField,
-  Typography,
+  // Button,
+  // Card,
+  // Container,
+  // Divider,
+  // FormControl,
+  // FormHelperText,
+  // Snackbar,
+  // Stack,
+  // TextField,
+  // Typography,
 } from "@mui/material";
-import { useForm, ValidationError } from "@formspree/react";
+// import { useForm, ValidationError } from "@formspree/react";
 import Background from "../../components/Background";
 
 const Workwithus = () => {
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
+  // const handleClick = () => {
+  //   setOpen(true);
+  // };
 
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
+  // const handleClose = (event, reason) => {
+  //   if (reason === "clickaway") {
+  //     return;
+  //   }
 
-    setOpen(false);
-  };
+  //   setOpen(false);
+  // };
 
-  const [state, handleSubmit] = useForm("xgeqdlpb");
-  if (state.succeeded) {
-    return (
-      <>
-        <Workwithus />
-        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-          <Alert
-            onClose={handleClose}
-            severity="success"
-            sx={{ width: "100%" }}
-          >
-            Your form is submitted successfully!
-          </Alert>
-        </Snackbar>
-      </>
-    );
-  }
+  // const [state, handleSubmit] = useForm("xgeqdlpb");
+  // if (state.succeeded) {
+  //   return (
+  //     <>
+  //       <Workwithus />
+  //       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+  //         <Alert
+  //           onClose={handleClose}
+  //           severity="success"
+  //           sx={{ width: "100%" }}
+  //         >
+  //           Your form is submitted successfully!
+  //         </Alert>
+  //       </Snackbar>
+  //     </>
+  //   );
+  // }
   return (
     <Box>
       <Background />
-      <Container>
+      {/* <Container>
         <Typography variant="h4" textAlign={"center"} gutterBottom mt={"2rem"}>
           Work With Us
         </Typography>
@@ -191,7 +191,19 @@ const Workwithus = () => {
             </Stack>
           </form>
         </Card>
-      </Container>
+      </Container> */}
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSclKU96F_uPH0bkxij7OCqHJHDipk-ZzpOENpZPB0ViQn9ZwQ/viewform?embedded=true"
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+        title="google"
+        width={"100%"}
+        height="2670px"
+      >
+        Loading…
+      </iframe>
     </Box>
   );
 };
