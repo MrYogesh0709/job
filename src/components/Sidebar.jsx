@@ -38,7 +38,7 @@ const Sidebar = () => {
     setOpen(!open);
   };
 
-  const [openSub, setOpenSub] = React.useState(true);
+  const [openSub, setOpenSub] = React.useState(false);
   const handleClick = () => {
     setOpenSub(!openSub);
   };
