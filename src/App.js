@@ -5,8 +5,8 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import About from "./page/about/About";
 import Contact from "./page/contact/Contact";
 import Footer from "./components/Footer";
-import Services from "./page/services/Services";
 import Workwithus from "./page/workwithus/Workwithus";
+import Jobsuopportservices from "./page/services/Job_support_services";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/jobsupportservices" element={<Jobsuopportservices />} />
           <Route path="/workwithus" element={<Workwithus />} />
         </Routes>
         <Footer />

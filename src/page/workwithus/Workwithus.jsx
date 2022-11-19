@@ -13,8 +13,8 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import hero from "../../images/home.jpg";
 import { useForm, ValidationError } from "@formspree/react";
+import Background from "../../components/Background";
 
 const Workwithus = () => {
   const [open, setOpen] = React.useState(false);
@@ -50,48 +50,7 @@ const Workwithus = () => {
   }
   return (
     <Box>
-      <Box
-        sx={{
-          backgroundImage: `url(${hero})`,
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "black",
-          backgroundPositionX: "center",
-          backgroundPositionY: "center",
-          backgroundSize: "cover",
-          height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
-          width: "100%",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "0 auto",
-            height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
-          }}
-        >
-          <Box sx={{ opacity: "1" }}>
-            <Typography
-              variant="h5"
-              lineHeight={1.2}
-              fontWeight="1000"
-              padding={"10px"}
-              display={"inline-block"}
-              alignItems="center"
-              marginBottom={"1rem"}
-              fontSize={{ xs: "2rem", md: "3rem" }}
-              sx={{
-                backgroundImage: "linear-gradient(180deg,green,red,blue)",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              Work With Us
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
+      <Background />
       <Container>
         <Typography variant="h4" textAlign={"center"} gutterBottom mt={"2rem"}>
           Work With Us

@@ -5,19 +5,16 @@ import {
   Stack,
   Typography,
   Container,
-  Button,
-  Box,
 } from "@mui/material";
 import about_us from "../../images/about/about_us.avif";
-import { Link } from "react-router-dom";
-import hero from "../../images/home.jpg";
 import why from "../../images/about/why.avif";
 import work from "../../images/about/work.avif";
+import Background from "../../components/Background";
 
 const About = () => {
   return (
     <>
-      <Box
+      {/* <Box
         sx={{
           backgroundImage: `url(${hero})`,
           backgroundRepeat: "no-repeat",
@@ -106,7 +103,8 @@ const About = () => {
             </Button>
           </Box>
         </Box>
-      </Box>
+      </Box> */}
+      <Background />
       <Container sx={{ mt: "2rem", mb: "2rem" }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={8}>

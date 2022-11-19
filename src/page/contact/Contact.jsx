@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Box,
   Button,
   Card,
   Container,
@@ -11,9 +10,9 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import contact from "../../images/contact.webp";
 import MuiAlert from "@mui/material/Alert";
 import { useForm, ValidationError } from "@formspree/react";
+import Background from "../../components/Background";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -53,7 +52,7 @@ const Contact = () => {
   }
   return (
     <>
-      <Box
+      {/* <Box
         sx={{
           backgroundImage: `url(${contact})`,
           backgroundRepeat: "no-repeat",
@@ -69,7 +68,8 @@ const Contact = () => {
           },
           width: "100%",
         }}
-      />
+      /> */}
+      <Background />
       <Container>
         <Card sx={{ mt: "2rem", mb: "2rem", padding: "2rem" }}>
           <Typography variant="h5" textAlign={"center"} gutterBottom>

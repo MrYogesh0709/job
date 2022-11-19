@@ -2,7 +2,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { Box, Button, Menu, MenuItem } from "@mui/material";
 import React from "react";
-// import Jobpop from "./Jobpop";
+import { Link } from "react-router-dom";
 
 const Popup = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -39,8 +39,18 @@ const Popup = () => {
               "aria-labelledby": "basic-button",
             }}
           >
-            <MenuItem onClick={handleClose}>My account</MenuItem>
-            <MenuItem onClick={handleClose}>Logout</MenuItem>
+            <Link
+              to={"/jobsupportservices"}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <MenuItem onClick={handleClose}>Job Support Services</MenuItem>
+            </Link>
+            <Link
+              to={"/jobsupportservices"}
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <MenuItem onClick={handleClose}>Certification</MenuItem>
+            </Link>
           </Menu>
         </Button>
       </Box>

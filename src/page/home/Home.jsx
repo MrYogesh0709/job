@@ -1,4 +1,11 @@
 import React from "react";
+import Background from "../../components/Background";
+import { Link } from "react-router-dom";
+import home1 from "../../images/home1.jpg";
+import Grid from "@mui/material/Unstable_Grid2";
+import MoodRoundedIcon from "@mui/icons-material/MoodRounded";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import SentimentSatisfiedAltRoundedIcon from "@mui/icons-material/SentimentSatisfiedAltRounded";
 import {
   CardContent,
   Box,
@@ -7,96 +14,14 @@ import {
   CardMedia,
   Typography,
   Container,
-  Divider,
-  styled,
-  Paper,
   Stack,
+  Avatar,
 } from "@mui/material";
-import logo from "../../images/logo/sdfd.png";
-import home1 from "../../images/home1.jpg";
-import data from "../../images/home/data.jpg";
-import Grid from "@mui/material/Unstable_Grid2";
-import fullstack from "../../images/home/full-stack.png";
-import google from "../../images/home/google.png";
-import java from "../../images/home/java.webp";
-import aws from "../../images/home/logoaws.png";
-import azure from "../../images/home/azure.png";
-import net from "../../images/home/net.avif";
-import react from "../../images/home/reactlogo.png";
-import { Link } from "react-router-dom";
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-
-const dataStack = [
-  {
-    img: aws,
-    heading: "AWS Job Support",
-    para: "Developer Professionals available for Job Support and Interview Support Service",
-  },
-  {
-    img: azure,
-    heading: "azure Job Support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
-  },
-  {
-    img: fullstack,
-    heading: "Full Stack JobSupport ",
-    para: "Full Stack DevelopmentProfessionals available forJob Support and InterviewSupport Service",
-  },
-  {
-    img: react,
-    heading: "React Job Support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
-  },
-  {
-    img: google,
-    heading: "GCP Job support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
-  },
-  {
-    img: java,
-    heading: "Java Job support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
-  },
-  {
-    img: net,
-    heading: "Dot net support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
-  },
-  {
-    img: data,
-    heading: "Data enginerring support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
-  },
-];
 const Home = () => {
   return (
     <Box>
-      <Box
-        sx={{
-          backgroundColor: "black",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Box
-          component="img"
-          sx={{
-            height: 300,
-            width: "100%",
-            maxHeight: { xs: 300, md: 300 },
-            maxWidth: { xs: 350, md: 550 },
-          }}
-          alt="The house from the offer."
-          src={logo}
-        />
-      </Box>
+      <Background />
       <Container>
         <Card sx={{ margin: "2rem 0" }}>
           <Grid container spacing={2}>
@@ -156,64 +81,105 @@ const Home = () => {
         </Card>
       </Container>
       <Container>
-        <Typography variant="h5" textAlign={"center"}>
-          Our Popular Job Support
-          <Divider
-            sx={{
-              width: "20%",
-              color: "red",
-              margin: "0 auto",
-              borderColor: "blue",
-              borderBottomWidth: "medium",
-              mb: "1rem",
-              mt: "0.5rem",
-            }}
-          />
-        </Typography>
-
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 16 }}
-          mt="1rem"
-          mb="2rem"
-        >
-          {dataStack.map((item) => (
-            <Grid xs={2} sm={4} key={item.img}>
-              <Item>
-                <Box>
-                  <Stack direction="column" spacing={2}>
-                    <img
-                      src={`${item.img}`}
-                      alt={"item.img"}
-                      loading="lazy"
-                      width="100%"
-                      height="135px"
-                    />
-                    <Divider />
-                    <Typography
-                      variant="h6"
-                      fontWeight={700}
-                      minHeight={90}
-                      textTransform="capitalize"
-                    >
-                      {item.heading}
-                    </Typography>
-                    <Typography
-                      variant="p"
-                      fontWeight={500}
-                      textAlign="justify"
-                      minHeight={10}
-                      sx={{ wordBreak: "break-word" }}
-                    >
-                      {item.para}
-                    </Typography>
-                  </Stack>
-                </Box>
-              </Item>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={3} justifyContent="center">
+            <Grid sx={{ xs: "16" }}>
+              <Card
+                sx={{
+                  backgroundColor: "pink",
+                  mt: "1rem",
+                  mb: "1rem",
+                  padding: "2rem",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: "24px 48px 24px 48px",
+                }}
+              >
+                <Stack alignItems={"center"} gap="1rem">
+                  <Avatar
+                    sx={{
+                      backgroundColor: "rgb(17, 105, 142)",
+                      border: "1px solid rgb(17, 105, 142)",
+                      height: "50px",
+                      width: "50px",
+                    }}
+                  >
+                    <SentimentSatisfiedAltRoundedIcon fontSize="large" />
+                  </Avatar>
+                  <Typography variant="h4">500+</Typography>
+                  <Typography variant="h5" textAlign={"center"}>
+                    Happy Clients
+                  </Typography>
+                </Stack>
+              </Card>
             </Grid>
-          ))}
-        </Grid>
+            <Grid sx={{ xs: "16" }}>
+              <Card
+                sx={{
+                  backgroundColor: "skyblue",
+                  mt: "1rem",
+                  mb: "1rem",
+                  padding: "2rem",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: "24px 48px 24px 48px",
+                }}
+              >
+                <Stack alignItems={"center"} gap="1rem">
+                  <Avatar
+                    sx={{
+                      backgroundColor: "rgb(17, 105, 142)",
+                      border: "1px solid rgb(17, 105, 142)",
+                      height: "50px",
+                      width: "50px",
+                    }}
+                  >
+                    <AccessTimeIcon fontSize="large" />
+                  </Avatar>
+
+                  <Typography variant="h4">24/7</Typography>
+                  <Typography variant="h5" textAlign={"center"}>
+                    Support Availabilty
+                  </Typography>
+                </Stack>
+              </Card>
+            </Grid>
+            <Grid sx={{ xs: "16" }}>
+              <Card
+                sx={{
+                  backgroundColor: "pink",
+                  mt: "1rem",
+                  mb: "1rem",
+                  padding: "2rem",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: "24px 48px 24px 48px",
+                }}
+              >
+                <Stack alignItems={"center"} gap="1rem">
+                  <Avatar
+                    sx={{
+                      backgroundColor: "rgb(17, 105, 142)",
+                      border: "1px solid rgb(17, 105, 142)",
+                      height: "50px",
+                      width: "50px",
+                    }}
+                  >
+                    <MoodRoundedIcon fontSize="large" />
+                  </Avatar>
+
+                  <Typography variant="h4">100%</Typography>
+                  <Typography variant="h5" textAlign={"center"}>
+                    Satisfied Customers
+                  </Typography>
+                </Stack>
+              </Card>
+            </Grid>
+          </Grid>
+        </Box>
       </Container>
     </Box>
   );
