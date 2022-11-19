@@ -1,9 +1,18 @@
+import styled from "@emotion/styled";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { Box, Button, Menu, MenuItem } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
+const StyledButton = styled(Button)({
+  "&:hover": {
+    color: "skyblue",
+  },
+  "&:active": {
+    color: "greenyellow",
+  },
+});
 const Popup = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -16,7 +25,7 @@ const Popup = () => {
   return (
     <Box>
       <Box>
-        <Button
+        <StyledButton
           sx={{
             my: 2,
             color: "white",
@@ -43,16 +52,20 @@ const Popup = () => {
               to={"/jobsupportservices"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              <MenuItem onClick={handleClose}>Job Support Services</MenuItem>
+              <MenuItem onClick={handleClose} className="sidebar-name">
+                Job Support Services
+              </MenuItem>
             </Link>
             <Link
               to={"/jobsupportservices"}
               style={{ color: "inherit", textDecoration: "none" }}
             >
-              <MenuItem onClick={handleClose}>Certification</MenuItem>
+              <MenuItem onClick={handleClose} className="sidebar-name">
+                Certification
+              </MenuItem>
             </Link>
           </Menu>
-        </Button>
+        </StyledButton>
       </Box>
     </Box>
   );

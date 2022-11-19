@@ -25,6 +25,7 @@ const Navbar = () => {
     <AppBar position="static" sx={{ backgroundColor: "black" }}>
       <Container>
         <Toolbar disableGutters>
+          {/* Sidebar Added */}
           <Sidebar />
           <Link to="/">
             <Box display="flex" justifyContent={"center"} alignItems="center">
@@ -52,6 +53,7 @@ const Navbar = () => {
                 About Us
               </StyledButton>
             </Link>
+            {/* Popup Added */}
             <Popup />
             <Link
               to={"/contact"}
