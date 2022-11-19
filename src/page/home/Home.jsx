@@ -17,8 +17,41 @@ import {
   Stack,
   Avatar,
 } from "@mui/material";
-
+let limiter = 500;
+let Customers = 100;
+let time = 24;
 const Home = () => {
+  const [clients, setClients] = React.useState(0);
+  React.useEffect(() => {
+    const incrementer = setInterval(() => {
+      setClients((c) => {
+        if (c < limiter) return c + 5;
+        clearInterval(incrementer);
+        return c;
+      });
+    }, 20);
+  }, []);
+  const [customer, setCustomer] = React.useState(0);
+  React.useEffect(() => {
+    const incrementer = setInterval(() => {
+      setCustomer((c) => {
+        if (c < Customers) return c + 5;
+        clearInterval(incrementer);
+        return c;
+      });
+    }, 50);
+  }, []);
+  const [support, setSupport] = React.useState(0);
+  React.useEffect(() => {
+    const incrementer = setInterval(() => {
+      setSupport((c) => {
+        if (c < time) return c + 1;
+        clearInterval(incrementer);
+        return c;
+      });
+    }, 80);
+  }, []);
+
   return (
     <Box>
       <Background />
@@ -117,7 +150,7 @@ const Home = () => {
                   >
                     <SentimentSatisfiedAltRoundedIcon fontSize="large" />
                   </Avatar>
-                  <Typography variant="h4">500+</Typography>
+                  <Typography variant="h4">{clients}+</Typography>
                   <Typography variant="h5" textAlign={"center"}>
                     Happy Clients
                   </Typography>
@@ -149,7 +182,7 @@ const Home = () => {
                     <AccessTimeIcon fontSize="large" />
                   </Avatar>
 
-                  <Typography variant="h4">24/7</Typography>
+                  <Typography variant="h4">{support}/7</Typography>
                   <Typography variant="h5" textAlign={"center"}>
                     Support Availabilty
                   </Typography>
@@ -181,7 +214,7 @@ const Home = () => {
                     <MoodRoundedIcon fontSize="large" />
                   </Avatar>
 
-                  <Typography variant="h4">100%</Typography>
+                  <Typography variant="h4">{customer}%</Typography>
                   <Typography variant="h5" textAlign={"center"}>
                     Satisfied Customers
                   </Typography>
