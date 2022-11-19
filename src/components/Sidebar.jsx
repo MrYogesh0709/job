@@ -153,7 +153,7 @@ const Sidebar = () => {
                           <WorkspacePremiumIcon />
                         </ListItemIcon>
                         <StyledListItemText
-                          primary="certification"
+                          primary="Certification"
                           className="sidebar-name"
                         />
                       </ListItemButton>
