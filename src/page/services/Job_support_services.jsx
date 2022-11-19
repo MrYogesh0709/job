@@ -86,7 +86,15 @@ const Job_suopport_services = () => {
       /> */}
       <Background />
       <Container sx={{ mt: "2rem" }}>
-        <Typography variant="h5" textAlign={"center"}>
+        <Typography
+          variant="h5"
+          textAlign={"center"}
+          sx={{
+            backgroundImage: "linear-gradient(90deg, blue, green)",
+            backgroundClip: "text",
+            color: "transparent",
+          }}
+        >
           Our Popular Job Support
           <Divider
             sx={{

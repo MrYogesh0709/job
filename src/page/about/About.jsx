@@ -113,6 +113,11 @@ const About = () => {
                 variant="h3"
                 textTransform="capitalize"
                 textAlign={"center"}
+                sx={{
+                  backgroundImage: "linear-gradient(90deg, blue, green)",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
               >
                 about us
               </Typography>
@@ -177,6 +182,11 @@ const About = () => {
                 variant="h3"
                 textTransform="capitalize"
                 textAlign={"center"}
+                sx={{
+                  backgroundImage: "linear-gradient(90deg, blue, green)",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
               >
                 why us?
               </Typography>
@@ -224,6 +234,11 @@ const About = () => {
                 variant="h3"
                 textTransform="capitalize"
                 textAlign={"center"}
+                sx={{
+                  backgroundImage: "linear-gradient(90deg, blue, green)",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
               >
                 How We Work ?
               </Typography>

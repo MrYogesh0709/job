@@ -34,6 +34,11 @@ const Home = () => {
                 component="div"
                 textAlign={"center"}
                 mt="1rem"
+                sx={{
+                  backgroundImage: "linear-gradient(90deg, blue, green)",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
               >
                 Get Online Job Support
               </Typography>
@@ -42,6 +47,11 @@ const Home = () => {
                 variant="h5"
                 component="div"
                 textAlign={"center"}
+                sx={{
+                  backgroundImage: "linear-gradient(90deg, blue, green)",
+                  backgroundClip: "text",
+                  color: "transparent",
+                }}
               >
                 From Real Time Professional
               </Typography>

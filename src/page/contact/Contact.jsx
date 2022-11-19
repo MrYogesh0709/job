@@ -72,7 +72,16 @@ const Contact = () => {
       <Background />
       <Container maxWidth="md">
         <Card sx={{ mt: "2rem", mb: "2rem", padding: "2rem" }}>
-          <Typography variant="h5" textAlign={"center"} gutterBottom>
+          <Typography
+            variant="h5"
+            textAlign={"center"}
+            gutterBottom
+            sx={{
+              backgroundImage: "linear-gradient(90deg, blue, green)",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          >
             GET IN TOUCH
           </Typography>
           <form

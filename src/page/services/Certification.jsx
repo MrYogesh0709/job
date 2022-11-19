@@ -116,7 +116,15 @@ const Certification = () => {
         </Typography>
 
         <Card sx={{ pt: "1rem", pb: "1rem", mb: "2rem", mt: "2rem" }}>
-          <Typography variant="h5" textAlign={"center"}>
+          <Typography
+            variant="h5"
+            textAlign={"center"}
+            sx={{
+              backgroundImage: "linear-gradient(90deg, blue, green)",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          >
             All IT Exams Dumps
           </Typography>
           <Divider sx={{ mb: "2rem" }} />
