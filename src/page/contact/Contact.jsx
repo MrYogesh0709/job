@@ -70,7 +70,7 @@ const Contact = () => {
         }}
       /> */}
       <Background />
-      <Container>
+      <Container maxWidth="md">
         <Card sx={{ mt: "2rem", mb: "2rem", padding: "2rem" }}>
           <Typography variant="h5" textAlign={"center"} gutterBottom>
             GET IN TOUCH
