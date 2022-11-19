@@ -127,7 +127,7 @@ const Certification = () => {
           >
             All IT Exams Dumps
           </Typography>
-          <Divider sx={{ mb: "2rem" }} />
+          <Divider sx={{ width: "50%", margin: "2rem auto" }} />
           <Grid
             container
             rowSpacing={1}
