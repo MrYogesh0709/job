@@ -6,6 +6,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import MoodRoundedIcon from "@mui/icons-material/MoodRounded";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import SentimentSatisfiedAltRoundedIcon from "@mui/icons-material/SentimentSatisfiedAltRounded";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   CardContent,
   Box,
@@ -35,7 +37,7 @@ const Home = () => {
   React.useEffect(() => {
     const incrementer = setInterval(() => {
       setCustomer((c) => {
-        if (c < Customers) return c + 5;
+        if (c < Customers) return c + 2;
         clearInterval(incrementer);
         return c;
       });
@@ -223,6 +225,59 @@ const Home = () => {
             </Grid>
           </Grid>
         </Box>
+      </Container>
+      <Container
+        sx={{
+          mb: "2rem",
+          mt: "5rem",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Card sx={{ maxWidth: "sm", padding: "0 1rem" }}>
+          <Typography
+            variant="h4"
+            fontWeight={800}
+            sx={{
+              backgroundImage: "linear-gradient(360deg, green, blue)",
+              backgroundClip: "text",
+              color: "transparent",
+              mt: "5rem",
+              mb: "2rem",
+            }}
+            textAlign="center"
+          >
+            TESTIMONIALS
+          </Typography>
+          <Typography
+            variant="h6"
+            component={"p"}
+            textAlign={"center"}
+            mb={"2rem"}
+          >
+            "Prem is providing excellent Python online job support from India"
+          </Typography>
+          <Box
+            display={"flex"}
+            alignItems="center"
+            justifyContent={"space-between"}
+            marginBottom="5rem"
+          >
+            <ArrowBackIosNewIcon />
+            <Typography
+              variant="h6"
+              component={"p"}
+              sx={{
+                backgroundImage: "linear-gradient(360deg, green, blue)",
+                backgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              "Yogesh"
+            </Typography>
+            <ArrowForwardIosIcon />
+          </Box>
+        </Card>
       </Container>
     </Box>
   );
