@@ -135,7 +135,10 @@ const Sidebar = () => {
                         <ListItemIcon>
                           <SupportAgentIcon />
                         </ListItemIcon>
-                        <ListItemText primary="Job Support" />
+                        <StyledListItemText
+                          primary="Job Support"
+                          className="sidebar-name"
+                        />
                       </ListItemButton>
                     </List>
                   </Link>
@@ -149,7 +152,10 @@ const Sidebar = () => {
                         <ListItemIcon>
                           <WorkspacePremiumIcon />
                         </ListItemIcon>
-                        <ListItemText primary="certification" />
+                        <StyledListItemText
+                          primary="certification"
+                          className="sidebar-name"
+                        />
                       </ListItemButton>
                     </List>
                   </Link>
