@@ -51,7 +51,6 @@ const theme = {
   botFontColor: "white",
   userBubbleColor: "green",
   userFontColor: "white",
-  height: "80%",
 };
 const config = {
   botAvatar: bot,

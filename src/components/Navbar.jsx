@@ -26,6 +26,7 @@ const Navbar = () => {
       sx={{
         backgroundColor: "black",
         position: { xs: "sticky", md: "static" },
+        zIndex: 1,
       }}
     >
       <Container>
