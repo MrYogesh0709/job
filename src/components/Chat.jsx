@@ -5,40 +5,18 @@ import bot from "../images/bot.jpg";
 
 const steps = [
   {
-    id: "0",
-    message:
-      "Hii, I am a support bot and my name is Max , May i know your name please ?",
-    trigger: "1",
-  },
-  {
     id: "1",
-    user: true,
+    message: "What is your name?",
     trigger: "2",
   },
   {
     id: "2",
-    message: "how can i help you?",
+    user: true,
     trigger: "3",
   },
   {
     id: "3",
-    user: true,
-    trigger: "4",
-  },
-  {
-    id: "4",
-    message:
-      "Just in case we get disconnected , can i have your phone no please ",
-    trigger: "5",
-  },
-  {
-    id: "5",
-    user: true,
-    trigger: "6",
-  },
-  {
-    id: "6",
-    message: "thanks,we'll connect you soon!",
+    message: "Hi {previousValue}, nice to meet you!",
     end: true,
   },
 ];
