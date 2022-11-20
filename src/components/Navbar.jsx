@@ -22,7 +22,12 @@ const StyledButton = styled(Button)({
 
 const Navbar = () => {
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "black" }}>
+    <AppBar
+      sx={{
+        backgroundColor: "black",
+        position: { xs: "sticky", md: "static" },
+      }}
+    >
       <Container>
         <Toolbar disableGutters>
           {/* Sidebar Added */}
