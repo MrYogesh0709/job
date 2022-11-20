@@ -23,9 +23,8 @@
 .sidebar-name:hover {
   transform: translateX(5%);
 }
-
-@media screen and (max-width: 900px) {
-  .rsc-header {
-    margin-top: 3.2rem;
+@media screen and (max-width: 568px) {
+  .buSoPE {
+    height: 92% !important;
   }
 }
