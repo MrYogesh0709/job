@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Workwithus from "./page/workwithus/Workwithus";
 import Jobsuopportservices from "./page/services/Job_support_services";
 import Certification from "./page/services/Certification";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/workwithus" element={<Workwithus />} />
           <Route path="/certification" element={<Certification />} />
         </Routes>
+        <Chat />
         <Footer />
       </BrowserRouter>
     </>
