@@ -52,23 +52,6 @@ const Contact = () => {
   }
   return (
     <>
-      {/* <Box
-        sx={{
-          backgroundImage: `url(${contact})`,
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "black",
-          backgroundPositionX: "center",
-          backgroundPositionY: "center",
-          backgroundSize: "cover",
-          height: {
-            xs: "230px",
-            sm: "280px",
-            md: "280px",
-            lg: "300px",
-          },
-          width: "100%",
-        }}
-      /> */}
       <Background />
       <Container maxWidth="md">
         <Card sx={{ mt: "2rem", mb: "2rem", padding: "2rem" }}>

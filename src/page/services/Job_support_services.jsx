@@ -72,18 +72,6 @@ const Item = styled(Paper)(({ theme }) => ({
 const Job_suopport_services = () => {
   return (
     <>
-      {/* <Box
-        sx={{
-          backgroundImage: `url(${about})`,
-          backgroundRepeat: "no-repeat",
-          backgroundColor: "black",
-          backgroundPositionX: "center",
-          backgroundPositionY: "center",
-          backgroundSize: "cover",
-          height: { xs: "230px", sm: "280px", md: "280px", lg: "300px" },
-          width: "100%",
-        }}
-      /> */}
       <Background />
       <Container sx={{ mt: "2rem" }}>
         <Typography

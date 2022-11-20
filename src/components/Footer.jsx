@@ -147,7 +147,24 @@ const Footer = () => {
               href="tel: +91 6280811923"
               sx={{ textDecoration: "none" }}
             >
-              +91 6280811923
+              +91 628-081-1923
+            </Typography>
+          </Box>
+          <Box display={"flex"} gap="1rem" alignItems={"center"}>
+            <Box component={"a"} href="tel: +1 4697216395">
+              <CallOutlinedIcon className="logo" />
+            </Box>
+
+            <Typography
+              variant="h6"
+              color={"skyblue"}
+              textAlign={"center"}
+              component="a"
+              target="_blank"
+              href="tel: +1 4697216395"
+              sx={{ textDecoration: "none" }}
+            >
+              +1(469) 721 6395
             </Typography>
           </Box>
           <Typography variant="h7" color={"white"} textAlign="center">

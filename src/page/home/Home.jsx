@@ -6,8 +6,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import MoodRoundedIcon from "@mui/icons-material/MoodRounded";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import SentimentSatisfiedAltRoundedIcon from "@mui/icons-material/SentimentSatisfiedAltRounded";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 import {
   CardContent,
   Box,
@@ -18,11 +17,62 @@ import {
   Container,
   Stack,
   Avatar,
+  useTheme,
 } from "@mui/material";
+import MobileStepper from "@mui/material/MobileStepper";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+const data = [
+  {
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus ex maiores, blanditiis obcaecati, officia debitis deserunt quam aspernatur perspiciatis error. Perspiciatis, ab.",
+    name: "kfajlkfj",
+  },
+  {
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus ex maiores, blanditiis obcaecati, officia debitis deserunt quam aspernatur perspiciatis error. Perspiciatis, ab.",
+    name: "kfajlkfy",
+  },
+  {
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus ex maiores, blanditiis obcaecati, officia debitis deserunt quam aspernatur perspiciatis error. Perspiciatis, ab.",
+    name: "kfajlkfb",
+  },
+  {
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus ex maiores, blanditiis obcaecati, officia debitis deserunt quam aspernatur perspiciatis error. Perspiciatis, ab.",
+    name: "kfajlkfq",
+  },
+  {
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus ex maiores, blanditiis obcaecati, officia debitis deserunt quam aspernatur perspiciatis error. Perspiciatis, ab.",
+    name: "kfajlkfp",
+  },
+  {
+    para: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus ex maiores, blanditiis obcaecati, officia debitis deserunt quam aspernatur perspiciatis error. Perspiciatis, ab.",
+    name: "kfajlkfa",
+  },
+];
+
 let limiter = 500;
 let Customers = 100;
 let time = 24;
+
 const Home = () => {
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = data.length;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
+  };
   const [clients, setClients] = React.useState(0);
   React.useEffect(() => {
     const incrementer = setInterval(() => {
@@ -234,48 +284,98 @@ const Home = () => {
           justifyContent: "center",
         }}
       >
-        <Card sx={{ maxWidth: "sm", padding: "0 1rem" }}>
-          <Typography
-            variant="h4"
-            fontWeight={800}
-            sx={{
-              backgroundImage: "linear-gradient(360deg, green, blue)",
-              backgroundClip: "text",
-              color: "transparent",
-              mt: "5rem",
-              mb: "2rem",
-            }}
-            textAlign="center"
-          >
-            TESTIMONIALS
-          </Typography>
-          <Typography
-            variant="h6"
-            component={"p"}
-            textAlign={"center"}
-            mb={"2rem"}
-          >
-            "Prem is providing excellent Python online job support from India"
-          </Typography>
-          <Box
-            display={"flex"}
-            alignItems="center"
-            justifyContent={"space-between"}
-            marginBottom="5rem"
-          >
-            <ArrowBackIosNewIcon />
+        <Card>
+          <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
             <Typography
-              variant="h6"
-              component={"p"}
+              variant="h4"
+              fontWeight={800}
               sx={{
                 backgroundImage: "linear-gradient(360deg, green, blue)",
                 backgroundClip: "text",
                 color: "transparent",
+                mt: "5rem",
+                mb: "2rem",
               }}
+              textAlign="center"
             >
-              "Yogesh"
+              TESTIMONIALS
             </Typography>
-            <ArrowForwardIosIcon />
+            <AutoPlaySwipeableViews
+              axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+              index={activeStep}
+              onChangeIndex={handleStepChange}
+              enableMouseEvents
+            >
+              {data.map((step, index) => (
+                <div key={step.name}>
+                  {Math.abs(activeStep - index) <= 2 ? (
+                    <Card sx={{ maxWidth: "sm", padding: "0 2rem" }}>
+                      <Typography
+                        variant="h6"
+                        component={"p"}
+                        textAlign={"center"}
+                        mb={"2rem"}
+                      >
+                        {step.para}
+                      </Typography>
+                      <Box
+                        display={"flex"}
+                        alignItems="center"
+                        justifyContent="center"
+                        marginBottom="5rem"
+                      >
+                        <Typography
+                          variant="h6"
+                          component={"p"}
+                          sx={{
+                            backgroundImage:
+                              "linear-gradient(360deg, green, blue)",
+                            backgroundClip: "text",
+                            color: "transparent",
+                          }}
+                        >
+                          {step.name}
+                        </Typography>
+                      </Box>
+                    </Card>
+                  ) : null}
+                </div>
+              ))}
+            </AutoPlaySwipeableViews>
+
+            <MobileStepper
+              steps={maxSteps}
+              position="static"
+              activeStep={activeStep}
+              nextButton={
+                <Button
+                  size="small"
+                  onClick={handleNext}
+                  disabled={activeStep === maxSteps - 1}
+                >
+                  Next
+                  {theme.direction === "rtl" ? (
+                    <KeyboardArrowLeft />
+                  ) : (
+                    <KeyboardArrowRight />
+                  )}
+                </Button>
+              }
+              backButton={
+                <Button
+                  size="small"
+                  onClick={handleBack}
+                  disabled={activeStep === 0}
+                >
+                  {theme.direction === "rtl" ? (
+                    <KeyboardArrowRight />
+                  ) : (
+                    <KeyboardArrowLeft />
+                  )}
+                  Back
+                </Button>
+              }
+            />
           </Box>
         </Card>
       </Container>
