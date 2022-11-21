@@ -6,17 +6,45 @@ import bot from "../images/bot.jpg";
 const steps = [
   {
     id: "1",
-    message: "What is your name?",
+    message: "Hii,Welcome to Advika Technology,i'm Roze.",
     trigger: "2",
   },
   {
     id: "2",
-    user: true,
+    message: "What is Your Name?",
     trigger: "3",
   },
   {
     id: "3",
-    message: "Hi {previousValue}, nice to meet you!",
+    user: true,
+    trigger: "4",
+  },
+  {
+    id: "4",
+    message: "Hi {previousValue}  nice to meet you!",
+    trigger: "5",
+  },
+  {
+    id: "5",
+    message: "In Case We get disconnect May i Know Your Number: ",
+    trigger: "6",
+  },
+  {
+    id: "6",
+    user: true,
+    validator: (input) => {
+      var phoneno = /^\d{10}$/;
+      if (input.match(phoneno)) {
+        return true;
+      } else {
+        return "Please type a valid Number";
+      }
+    },
+    trigger: "7",
+  },
+  {
+    id: "7",
+    message: "Thanks,we'll connect you soon.",
     end: true,
   },
 ];
