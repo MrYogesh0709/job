@@ -23,12 +23,12 @@ const dataStack = [
   {
     img: aws,
     heading: "AWS Job Support",
-    para: "Developer Professionals available for Job Support and Interview Support Service",
+    para: "We provide support for AWS services like S3, EC2, Load balancers, CFT, CloudWatch, IAM,Code Build, Code Pipeline, other devops tools like Terraform, Docker, Kubernetes, Git, Jenkins, Maven and monitoring tools like Grafana, Prometheus and ELK.",
   },
   {
     img: azure,
-    heading: "azure Job Support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+    heading: "Azure Job Support",
+    para: "We provide support for Azure services like Virtual machines, Blob Storage, Load balancers, ARM Templates, Container service, other devops tools like Terraform, Docker, Kubernetes, Git, Jenkins, Maven and monitoring tools like Grafana, Prometheus and ELK.",
   },
   {
     img: fullstack,
@@ -43,7 +43,7 @@ const dataStack = [
   {
     img: google,
     heading: "GCP Job support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+    para: "We provide support for GCP services like Compute Engine,Cloud Storage, Cloud Load balancers, CDM, Container Engine, other devops tools like Terraform, Docker, Kubernetes, Git, Jenkins, Maven and monitoring tools like Grafana, Prometheus and ELK.",
   },
   {
     img: java,
@@ -53,7 +53,7 @@ const dataStack = [
   {
     img: net,
     heading: "Dot net support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+    para: "We provide support for Dotnet core, C# and other ",
   },
   {
     img: data,
