@@ -15,7 +15,7 @@ import java from "../../images/home/java.webp";
 import aws from "../../images/home/logoaws.png";
 import azure from "../../images/home/azure.png";
 import net from "../../images/home/net.avif";
-import react from "../../images/home/reactlogo.png";
+import testing from "../../images/home/Testing.png";
 import data from "../../images/home/data.jpg";
 import Background from "../../components/Background";
 
@@ -32,33 +32,33 @@ const dataStack = [
   },
   {
     img: fullstack,
-    heading: "Full Stack JobSupport ",
-    para: "Full Stack DevelopmentProfessionals available forJob Support and InterviewSupport Service",
+    heading: "Full Stack Job Support ",
+    para: "We provide job support for Full Stack developer in Languages like NodeJS, AngularJS and ReactJS",
   },
   {
-    img: react,
-    heading: "React Job Support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+    img: testing,
+    heading: "Testing Job Support",
+    para: "We provide job support for both (manual/automation) testing profiles in tools/technologies like Selenium, JIRA, testNG, Cucumber and python",
   },
   {
     img: google,
-    heading: "GCP Job support",
+    heading: "GCP Job Support",
     para: "We provide support for GCP services like Compute Engine,Cloud Storage, Cloud Load balancers, CDM, Container Engine, other devops tools like Terraform, Docker, Kubernetes, Git, Jenkins, Maven and monitoring tools like Grafana, Prometheus and ELK.",
   },
   {
     img: java,
-    heading: "Java Job support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+    heading: "Java Job Support",
+    para: "We provide job support for core Java, SpringBoot, JS, Swings, JSF, JSP, HTML and Struts",
   },
   {
     img: net,
-    heading: "Dot net support",
-    para: "We provide support for Dotnet core, C# and other ",
+    heading: "Dotnet Job Support",
+    para: "We provide job support for Dotnet core, C# and other related databases",
   },
   {
     img: data,
-    heading: "Data enginerring support",
-    para: "AWS / Azure / acp with Professionals DevOps available for Job Support and Interview Support Service",
+    heading: "Data Enginerring Support",
+    para: "We provide data engineering job support for PySpark, Airflow, Hadoop, Hive and Scala",
   },
 ];
 
