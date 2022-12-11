@@ -102,12 +102,14 @@ const About = () => {
               </Typography>
               <Divider />
               <Typography variant="p" textTransform="capitalize">
-                At Advika Technology, we take care of all your problems. 100%
-                satisfaction is guaranteed, else we will refund your money, no
-                question asked. Now you can sit back and relax, we will provide
-                you best possible solutions in most reasonable prices. Once you
-                make bond with us, we will make sure you don't have to look
-                anywhere else for anything.
+                If you are new to your field and face challenges in completing
+                your tasks. Don't worry, our consultants having vast expereince
+                in handling any complex projects and scenerios. We have already 
+                provided job support to more than 500 clients with 100% satisfaction. 
+                We will schedule demo with the support person on first day. 
+                If you are satisfied with the suppport person, then we will start the 
+                job support from next day after taking initial payment from you.
+                The fees charged by us is very nominal as compared to the market.
               </Typography>
               <Grid
                 item
@@ -154,12 +156,11 @@ const About = () => {
               </Typography>
               <Divider />
               <Typography variant="p" textTransform="capitalize">
-                At Advika Technology, we take care of all your problems. 100%
-                satisfaction is guaranteed, else we will refund your money, no
-                question asked. Now you can sit back and relax, we will provide
-                you best possible solutions in most reasonable prices. Once you
-                make bond with us, we will make sure you don't have to look
-                anywhere else for anything.
+                Our trainers are full time experienced Professionals working with big MNCs
+                having vast experience in their fields. They will take your requirements in
+                great details and then will start working on your project after going
+                the architecture. They will work on your tasks and explain you the steps 
+                performed in completing your tasks.  
                 <br />
                 <br />
                 Send us mail on :
