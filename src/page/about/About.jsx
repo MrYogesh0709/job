@@ -32,7 +32,7 @@ const About = () => {
                 about us
               </Typography>
               <Divider />
-              <Typography variant="p" textTransform="capitalize">
+              <Typography variant="p">
                 At Advika Technology, we take care of all your problems. 100%
                 satisfaction is guaranteed, else we will refund your money, no
                 question asked. Now you can sit back and relax, we will provide
@@ -101,7 +101,7 @@ const About = () => {
                 why us?
               </Typography>
               <Divider />
-              <Typography variant="p" textTransform="capitalize">
+              <Typography variant="p">
                 If you are new to your field and face challenges in completing
                 your tasks. Don't worry, our consultants having vast expereince
                 in handling any complex projects and scenerios. We have already 
@@ -155,7 +155,7 @@ const About = () => {
                 How We Work ?
               </Typography>
               <Divider />
-              <Typography variant="p" textTransform="capitalize">
+              <Typography variant="p" >
                 Our trainers are full time experienced Professionals working with big MNCs
                 having vast experience in their fields. They will take your requirements in
                 great details and then will start working on your project after going
