@@ -57,7 +57,7 @@ const dataStack = [
   },
   {
     img: data,
-    heading: "Data Enginerring Support",
+    heading: "Data Engineering Support",
     para: "We provide data engineering job support for PySpark, Airflow, Hadoop, Hive and Scala",
   },
 ];
