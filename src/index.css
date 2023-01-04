@@ -23,3 +23,6 @@
 .sidebar-name:hover {
   transform: translateX(5%);
 }
+.PhoneInputInput {
+  padding: 15px !important;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Card,
@@ -13,7 +13,8 @@ import {
 import MuiAlert from "@mui/material/Alert";
 import { useForm, ValidationError } from "@formspree/react";
 import Background from "../../components/Background";
-
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
@@ -32,8 +33,8 @@ const Contact = () => {
 
     setOpen(false);
   };
-
-  const [state, handleSubmit] = useForm("xgeqdlpb");
+  const [value, setValue] = useState();
+  const [state, handleSubmit] = useForm("xknawzaj");
   if (state.succeeded) {
     return (
       <>
@@ -68,7 +69,8 @@ const Contact = () => {
             GET IN TOUCH
           </Typography>
           <form
-            action="https://formspree.io/f/xgeqdlpb"
+            // action="https://formspree.io/f/xgeqdlpb"
+            action="https://formspree.io/f/xknawzaj"
             method="POST"
             className="form"
             onSubmit={handleSubmit}
@@ -106,7 +108,7 @@ const Contact = () => {
                 />
               </FormControl>
               <FormControl>
-                <TextField
+                {/* <TextField
                   id="outlined-basic"
                   type="tel"
                   pattern="[0-9]{10}"
@@ -115,6 +117,16 @@ const Contact = () => {
                   name="Phone"
                   variant="outlined"
                   sx={{ width: "100%" }}
+                /> */}
+                <PhoneInput
+                  defaultCountry="IN"
+                  placeholder="Enter phone number"
+                  value={value}
+                  required
+                  name="Phone"
+                  limitMaxLength
+                  isFocused
+                  onChange={setValue}
                 />
               </FormControl>
               <FormControl>
