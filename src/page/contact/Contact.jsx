@@ -34,7 +34,7 @@ const Contact = () => {
     setOpen(false);
   };
   const [value, setValue] = useState();
-  const [state, handleSubmit] = useForm("xknawzaj");
+  const [state, handleSubmit] = useForm("xgeqdlpb");
   if (state.succeeded) {
     return (
       <>
@@ -69,8 +69,7 @@ const Contact = () => {
             GET IN TOUCH
           </Typography>
           <form
-            // action="https://formspree.io/f/xgeqdlpb"
-            action="https://formspree.io/f/xknawzaj"
+            action="https://formspree.io/f/xgeqdlpb"
             method="POST"
             className="form"
             onSubmit={handleSubmit}
@@ -108,16 +107,6 @@ const Contact = () => {
                 />
               </FormControl>
               <FormControl>
-                {/* <TextField
-                  id="outlined-basic"
-                  type="tel"
-                  pattern="[0-9]{10}"
-                  required
-                  label="Phone"
-                  name="Phone"
-                  variant="outlined"
-                  sx={{ width: "100%" }}
-                /> */}
                 <PhoneInput
                   defaultCountry="IN"
                   placeholder="Enter phone number"
@@ -131,9 +120,9 @@ const Contact = () => {
               </FormControl>
               <FormControl>
                 <TextField
-                  label="Requirment"
+                  label="Requirement"
                   type="text"
-                  placeholder="Share Your Requirment Here"
+                  placeholder="Share Your Requirement Here"
                   id="message"
                   name="Message"
                   multiline
