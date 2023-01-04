@@ -114,8 +114,8 @@ const Contact = () => {
                   required
                   name="Phone"
                   limitMaxLength
-                  isFocused
                   onChange={setValue}
+                  isfocused="true"
                 />
               </FormControl>
               <FormControl>
