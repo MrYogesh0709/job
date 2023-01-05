@@ -28,19 +28,23 @@ import { autoPlay } from "react-swipeable-views-utils";
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const data = [
   {
-    para: "I am completely satisfied with the services recieved by the Advika Technology Team. I will recommend it to my friends.",
+    para:
+      "I am completely satisfied with the services recieved by the Advika Technology Team. I will recommend it to my friends.",
     name: "Jagadeesh Reddy",
   },
   {
-    para: "I got job as AWS Devops engineer and was very worried about the tasks assigned to me. Then i came to know about Advika Technology from my friends.",
+    para:
+      "I got job as AWS Devops engineer and was very worried about the tasks assigned to me. Then i came to know about Advika Technology from my friends.",
     name: "Dhiraj",
   },
   {
-    para: "Job Support provided by consultant Vignesh is really great. He explains the requirement in detail and then provide the best solution.",
+    para:
+      "Job Support provided by consultant Vignesh is really great. He explains the requirement in detail and then provide the best solution.",
     name: "Vaibhaw",
   },
   {
-    para: "100% satisifed with the services recieved from the consultants of Advika Technology. Best of Luck for your future. Keep Rocking!",
+    para:
+      "100% satisifed with the services recieved from the consultants of Advika Technology. Best of Luck for your future. Keep Rocking!",
     name: "Sameera Sen",
   },
   {
@@ -48,7 +52,8 @@ const data = [
     name: "Sandeep",
   },
   {
-    para: "services provided by consultant karthik is good. My tasks completed on time. Really Satisfied",
+    para:
+      "services provided by consultant karthik is good. My tasks completed on time. Really Satisfied",
     name: "Vishal Reddy",
   },
 ];
@@ -149,16 +154,17 @@ const Home = () => {
                 }}
               >
                 <Typography variant="body2" color="text.primary">
-                  At Advika Technology, our clients are our utmost priority and their
-                  satisfaction is guaranteed. Once you have contacted us, we will make sure 
-                  that you get the best possible solution for your problems and align our 
-                  best available consultant with you.
-                  If you are a fresher or experienced and facing challenges in completing 
-                  your day to day tasks assigned to you by your seniors or scrum masters. 
-                  Our team of experienced trainers will help you in completing your tasks
-                  by taking remote of your laptop. 
-                  We have already provided job support to more than 500 clients across 
-                  countries like USA, UK, Australia and Canada.   
+                  At Advika Technology, our clients are our utmost priority and
+                  their satisfaction is guaranteed. Once you have contacted us,
+                  we will make sure that you get the best possible solution for
+                  your problems and align our best available consultant with
+                  you. If you are a fresher or experienced and facing challenges
+                  in completing your day to day tasks assigned to you by your
+                  seniors or scrum masters. Our team of experienced trainers
+                  will help you in completing your tasks by taking remote of
+                  your laptop. We have already provided job support to more than
+                  500 clients across countries like USA, UK, Australia and
+                  Canada.
                 </Typography>
                 <Link
                   to="/about"
